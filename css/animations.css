@@ -41,6 +41,17 @@
     }
 }
 
+.page {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.page.active {
+    display: block;
+    opacity: 1;
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(30px);
