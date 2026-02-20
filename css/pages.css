@@ -35,7 +35,7 @@
   padding: 120px 24px 80px;
   background:
     linear-gradient(135deg, rgba(255,20,147,0.82), rgba(139,0,70,0.92)),
-    url('https://picsum.photos/seed/caliculturaltours/1400/900') center/cover no-repeat;
+    url('../images/home-hero.jpg') center/cover no-repeat;
 }
 .hero-content {
   max-width: 800px;
@@ -53,6 +53,7 @@
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 28px;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
 .hero h1 {
@@ -202,10 +203,51 @@
   align-items: flex-end;
   padding: 120px 24px 80px;
   position: relative;
-  background:
-    linear-gradient(to bottom, rgba(139,0,70,0.55) 0%, rgba(255,20,147,0.9) 100%),
-    url('') center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+.tour-hero--market-tour {
+  background-image: linear-gradient(to bottom, rgba(139,0,70,0.55) 0%, rgba(255,20,147,0.9) 100%), url('../images/tours/market-tour-hero.jpg');
+}
+
+.tour-hero--hummingbirds {
+  background-image: linear-gradient(to bottom, rgba(139,0,70,0.55) 0%, rgba(255,20,147,0.9) 100%), url('../images/tours/hummingbirds-hero.jpg');
+}
+
+.tour-hero--cristo-rey {
+  background-image: linear-gradient(to bottom, rgba(139,0,70,0.55) 0%, rgba(255,20,147,0.9) 100%), url('../images/tours/cristo-rey-hero.jpg');
+}
+
+.tour-hero--coffee-tasting {
+  background-image: linear-gradient(to bottom, rgba(139,0,70,0.55) 0%, rgba(255,20,147,0.9) 100%), url('../images/tours/coffee-tasting-hero.jpg');
+}
+
+.tour-hero--coffee-farm {
+  background-image: linear-gradient(to bottom, rgba(139,0,70,0.55) 0%, rgba(255,20,147,0.9) 100%), url('../images/tours/coffee-farm-hero.jpg');
+}
+
+.tour-hero--chocotour {
+  background-image: linear-gradient(to bottom, rgba(139,0,70,0.55) 0%, rgba(255,20,147,0.9) 100%), url('../images/tours/chocotour-hero.jpg');
+}
+
+.tour-hero--waterfalls {
+  background-image: linear-gradient(to bottom, rgba(139,0,70,0.55) 0%, rgba(255,20,147,0.9) 100%), url('../images/tours/waterfalls-hero.jpg');
+}
+
+.tour-hero--whale-watching {
+  background-image: linear-gradient(to bottom, rgba(139,0,70,0.55) 0%, rgba(255,20,147,0.9) 100%), url('../images/tours/whale-watching-hero.jpg');
+}
+
+.tour-hero--salsa-tour {
+  background-image: linear-gradient(to bottom, rgba(139,0,70,0.55) 0%, rgba(255,20,147,0.9) 100%), url('../images/tours/salsa-tour-hero.jpg');
+}
+
+.tour-hero--street-food {
+  background-image: linear-gradient(to bottom, rgba(139,0,70,0.55) 0%, rgba(255,20,147,0.9) 100%), url('../images/tours/street-food-hero.jpg');
+}
+
 .tour-hero-content {
   max-width: 860px;
   margin: 0 auto;

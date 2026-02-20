@@ -101,6 +101,14 @@
   gap: 24px;
 }
 .mobile-menu.open { display: flex; }
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 998;
+}
+.nav-overlay.show { display: block; }
 .mobile-menu a {
   color: var(--white);
   font-size: 1.4rem;

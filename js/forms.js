@@ -60,6 +60,10 @@ function handleFormSubmit(e, formId) {
     e.preventDefault();
 
     const form = document.getElementById(formId);
+    if (!form) {
+        console.warn(`[forms] Form not found: ${formId}`);
+        return;
+    }
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
 

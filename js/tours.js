@@ -5,7 +5,7 @@
 const filterBtns = document.querySelectorAll('.filter-btn');
 const tourCards = document.querySelectorAll('.tour-card');
 
-if (filterBtns && tourCards.length > 0) {
+if (filterBtns.length > 0 && tourCards.length > 0) {
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             // Update active button
