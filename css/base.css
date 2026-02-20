@@ -77,6 +77,150 @@ img { max-width: 100%; display: block; }
 .text-pink { color: var(--pink); }
 .text-white { color: var(--white); }
 
+/* Content page styles */
+.content-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: block;
+}
+
+.tip-box {
+  background: var(--pink-blush);
+  border-left: 4px solid var(--pink);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.tip-box h4 {
+  color: var(--pink-dark);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tip-box h4 i {
+  margin-right: 0.5rem;
+}
+
+.tip-box p {
+  margin: 0;
+}
+
+.warning-box {
+  background: rgba(255, 193, 7, 0.1);
+  border-left: 4px solid var(--pink-dark);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.warning-box h4 {
+  color: var(--pink-dark);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.warning-box h4 i {
+  margin-right: 0.5rem;
+}
+
+.warning-box p {
+  margin: 0;
+}
+
+/* Blog page styles */
+.blog-note {
+  text-align: center;
+  padding: 2rem;
+  background: var(--pink-blush);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.blog-note i {
+  color: var(--pink);
+  margin-right: 0.5rem;
+}
+
+.blog-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.blog-category-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.blog-category-card h3 {
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+.blog-category-card p {
+  margin-bottom: 1rem;
+}
+
+.blog-category-card .btn {
+  margin-top: 1rem;
+}
+
+/* Activities page styles */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.activity-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.day {
+  background: var(--pink);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.activity-card h3 {
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.activity-card p {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.activity-card .btn {
+  margin-top: 1rem;
+}
+
+/* Map page styles */
+.map-container {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 /* Screen reader only */
 .sr-only {
   position: absolute;

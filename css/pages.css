@@ -2,6 +2,26 @@
    PAGES — Cali Cultural Tours
    ============================================ */
 
+/* Page headers */
+.page-header {
+  text-align: center;
+  padding: 4rem 0 2rem;
+  background: linear-gradient(135deg, var(--pink-blush) 0%, rgba(255,255,255,0) 100%);
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--pink-dark);
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 /* ---- HOME HERO ---- */
 .hero {
   min-height: 100vh;

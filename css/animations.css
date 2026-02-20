@@ -52,6 +52,29 @@
     opacity: 1;
 }
 
+/* Ensure content pages are visible when active */
+.page.active .content-page {
+    display: block !important;
+}
+
+/* Ensure all page content is visible */
+.page.active .page-header {
+    display: block;
+}
+
+.page.active h1,
+.page.active h2,
+.page.active h3,
+.page.active h4,
+.page.active p,
+.page.active ul,
+.page.active .tip-box,
+.page.active .blog-categories,
+.page.active .activities-grid,
+.page.active .map-container {
+    display: block;
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(30px);
