@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} | Cali Cultural Tours</title>
+  <meta name="description" content="{{description}}">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="{{ogTitle}}">
+  <meta property="og:description" content="{{ogDescription}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ogUrl}}">
+  <meta property="og:image" content="{{ogImage}}">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Header Component -->
+  <header id="header-placeholder"></header>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+    {{content}}
+  </main>
+  
+  <!-- Footer Component -->
+  <footer id="footer-placeholder"></footer>
+  
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/573162543554" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contact Juan on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <!-- Scripts -->
+  <script src="js/template-engine.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/animations.js"></script>
+  
+  <!-- Page-specific scripts -->
+  {{scripts}}
+</body>
+</html>
