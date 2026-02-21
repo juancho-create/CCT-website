@@ -65,23 +65,21 @@
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   
   /* Transitions */
-  --transition-fast: 0.15s ease-in-out;
-  --transition-base: 0.25s ease-in-out;
-  --transition-slow: 0.3s ease-in-out;
-  --transition-slowest: 0.5s ease-in-out;
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* Z-index Scale */
-  --z-dropdown: 1000;
-  --z-sticky: 1020;
-  --z-fixed: 1030;
-  --z-modal-backdrop: 1040;
-  --z-modal: 1050;
-  --z-popover: 1060;
-  --z-tooltip: 1070;
-  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg-dark: rgba(26, 26, 26, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-blur: blur(12px);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+
   /* Gradients */
-  --gradient-pink: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%);
-  --gradient-wa: linear-gradient(135deg, var(--wa-green) 0%, #1da851 100%);
-  --gradient-hero: linear-gradient(135deg, rgba(255,20,147,0.92), rgba(139,0,70,0.98));
-  --gradient-footer: linear-gradient(180deg, var(--dark) 0%, #0d0d0d 100%);
+  --gradient-pink: linear-gradient(135deg, #FF1493 0%, #C2185B 100%);
+  --gradient-pink-light: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
+  --gradient-wa: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(255,20,147,0.85) 0%, rgba(139,0,70,0.95) 100%);
+  --gradient-surface: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
 }

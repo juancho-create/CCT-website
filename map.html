@@ -31,118 +31,65 @@
   <link rel="stylesheet" href="css/pages.css">
 </head>
 
-<body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+<header id="header-placeholder"></header>
 
-  <nav class="navbar" id="navbar">
-    <a href="index.html" class="navbar-brand">
-      <img src="images/logo.jpg" alt="Juan Camilo, founder and local guide of Cali Cultural Tours"
-        loading="lazy" decoding="async">
-      <div class="navbar-brand-text">
-        <div class="navbar-brand-name">CALI CULTURAL TOURS</div>
-        <div class="navbar-brand-sub">Your guide to Cali Colombia · RNT 196165</div>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="tours.html">Tours</a></li>
-      <li><a href="safety.html">Safety</a></li>
-      <li><a href="local-info.html">Local Info</a></li>
-      <li><a href="map.html" class="active">Map</a></li>
-      <li><a href="activities.html">Activities</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://www.instagram.com/caliculturaltours/" target="_blank" rel="noopener noreferrer" class="nav-instagram"><i
-            class="fab fa-instagram"></i></a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-menu-close" id="closeMenu" aria-label="Close navigation menu">
-      <i class="fas fa-times"></i>
-    </button>
-    <a href="index.html">Home</a>
-    <a href="tours.html">Tours</a>
-    <a href="safety.html">Safety</a>
-    <a href="local-info.html">Local Info</a>
-    <a href="map.html" class="active">Map</a>
-    <a href="activities.html">Activities</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+<main id="main-content">
+  <div class="page-header reveal">
+    <div class="container">
+      <h1>Discover Cali</h1>
+      <p>Your curated interactive map of the city. From local salsa secrets to safe neighborhoods and hidden nature
+        spots.</p>
+    </div>
   </div>
 
-  <main id="main-content">
-    <div class="page-header">
-      <h1>Cali Colombia Recommendations Map</h1>
-      <p>Find places to stay, places to go, safe & avoidable areas, local food spots, salsa schools, nature, all in one place. Your guide to Cali Colombia.</p>
-    </div>
+  <div class="content-page container reveal">
+    <section class="mb-40">
+      <h2 class="section-title">The Local's Guide Map</h2>
+      <p>I've personally curated this map with the best places to stay, eat, dance, and explore. I regularly update it
+        with new discoveries.</p>
+    </section>
 
-    <div class="content-page">
-      <h2>CALI COLOMBIA RECOMMENDATIONS MAP</h2>
-      <p>Points of interest, salsa schools, nightlife, restaurants... all here, curated by myself. I love to add new places. Any feedback let me know!</p>
-
-      <div class="tip-box">
-        <h4><i class="fas fa-info-circle"></i> Map Tip</h4>
-        <p>Slide the top black bar from right to left, you will see in the top right corner a "fullscreen" icon. It will add the map to your Google Maps app.</p>
-      </div>
-
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/d/u/0/embed?mid=1vGK8j3KZDmFGjbT5-0rEhRiF1YGhArk&ehbc=2E312F"
-          width="100%"
-          height="600"
-          style="border:0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
-          allowfullscreen=""
-          loading="lazy">
+    <div class="glass-card mb-40 p-0 overflow-hidden">
+      <div class="map-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1vGK8j3KZDmFGjbT5-0rEhRiF1YGhArk&ehbc=2E312F"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""
+          loading="lazy" title="Cali Cultural Tours Recommendations Map">
         </iframe>
       </div>
+    </div>
 
-      <div class="tip-box">
-        <h4><i class="fas fa-envelope"></i> Contact</h4>
-        <p>Have suggestions for the map or found a place that should be included? Let me know!</p>
-        <p><strong>Email:</strong> <a href="mailto:info.caliculturaltours@gmail.com">info.caliculturaltours@gmail.com</a></p>
-        <p><strong>WhatsApp:</strong> +57 316 254 3554</p>
+    <div class="info-grid reveal">
+      <div class="info-card">
+        <h4><i class="fas fa-expand"></i> Fullscreen View</h4>
+        <p>For the best experience on mobile, tap the fullscreen icon in the top right corner of the map to open it
+          directly in Google Maps.</p>
+      </div>
+      <div class="info-card">
+        <h4><i class="fas fa-layer-group"></i> Layer Legend</h4>
+        <p>Toggle layers to see different categories: Salsa Schools, Safe Zones, Nature Escapes, and local Caleño food
+          spots.</p>
       </div>
     </div>
-  </main>
 
-  <footer class="footer">
-    <div class="footer-tagline">"Showing Cali's true soul — one tour at a time"</div>
-
-    <div class="footer-contact">
-      <a href="mailto:info.caliculturaltours@gmail.com">info.caliculturaltours@gmail.com</a>
-      <a href="https://wa.me/573162543554" target="_blank" rel="noopener noreferrer">+57 316 254 3554</a>
+    <div class="tip-box reveal mt-60">
+      <h4><i class="fas fa-lightbulb"></i> Have a Suggestion?</h4>
+      <p>Found a hidden gem that belongs on this map? I'd love to hear from you.</p>
+      <a href="contact.html" class="btn btn-white btn-sm">Submit a Place</a>
     </div>
+  </div>
+</main>
 
-    <div class="footer-social">
-      <a href="https://wa.me/573162543554" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="https://www.instagram.com/caliculturaltours/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="mailto:info.caliculturaltours@gmail.com">
-        <i class="fas fa-envelope"></i>
-      </a>
-    </div>
+<footer id="footer-placeholder"></footer>
 
-    <div class="footer-copy">
-      ©2024 Cali Cultural Tours · RNT 196165 · Proudly showing Cali's soul.
-    </div>
-  </footer>
+<a href="https://wa.me/573162543554" class="wa-float" target="_blank" rel="noopener"
+  aria-label="Contact Juan on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-  <a href="https://wa.me/573162543554" class="wa-float" target="_blank" rel="noopener noreferrer"
-    aria-label="Contact Juan on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <script src="js/navigation.js"></script>
-  <script src="js/animations.js"></script>
+<!-- Scripts -->
+<script src="js/template-engine.js"></script>
+<script src="js/modern-animations.js"></script>
 </body>
 
 </html>
+

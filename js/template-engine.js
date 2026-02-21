@@ -15,14 +15,17 @@ class TemplateEngine {
     try {
       // Load site data
       await this.loadSiteData();
-      
+
       // Load components
       await this.loadComponents();
-      
+
+      // Update active navigation link
+      this.updateActiveNavLink();
+
       // Initialize performance optimizations
       this.setupLazyLoading();
       this.setupIntersectionObserver();
-      
+
       // Initialize page
       this.initializePage();
     } catch (error) {
@@ -42,13 +45,13 @@ class TemplateEngine {
 
   async loadComponents() {
     const components = ['header', 'footer'];
-    
+
     for (const component of components) {
       try {
         const response = await fetch(`templates/components/${component}.html`);
         const html = await response.text();
         this.cache.set(component, html);
-        
+
         // Inject into DOM
         const placeholder = document.getElementById(`${component}-placeholder`);
         if (placeholder) {
@@ -62,13 +65,27 @@ class TemplateEngine {
 
   renderTemplate(template, data = {}) {
     let rendered = template;
-    
-    // Simple template variable replacement
-    Object.keys(data).forEach(key => {
+
+    // Support nested data using dot notation (e.g. {{site.name}})
+    const flattenKeys = (obj, prefix = '') => {
+      let items = {};
+      for (const key in obj) {
+        if (typeof obj[key] === 'object' && obj[key] !== null) {
+          Object.assign(items, flattenKeys(obj[key], prefix + key + '.'));
+        } else {
+          items[prefix + key] = obj[key];
+        }
+      }
+      return items;
+    };
+
+    const flatData = flattenKeys(data);
+
+    Object.keys(flatData).forEach(key => {
       const regex = new RegExp(`{{${key}}}`, 'g');
-      rendered = rendered.replace(regex, data[key] || '');
+      rendered = rendered.replace(regex, flatData[key] || '');
     });
-    
+
     return rendered;
   }
 
@@ -86,13 +103,13 @@ class TemplateEngine {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target;
-          
+
           // Load the image
           if (img.dataset.src) {
             img.src = img.dataset.src;
             img.removeAttribute('data-src');
           }
-          
+
           // Add loaded class for fade-in effect
           img.classList.add('loaded');
           this.imageObserver.unobserve(img);
@@ -120,7 +137,7 @@ class TemplateEngine {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-in');
-          
+
           // Stagger animation for grid items
           if (entry.target.classList.contains('tour-card')) {
             const cards = Array.from(document.querySelectorAll('.tour-card'));
@@ -158,7 +175,7 @@ class TemplateEngine {
     fontLink.rel = 'preload';
     fontLink.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap';
     fontLink.as = 'style';
-    fontLink.onload = function() { this.rel = 'stylesheet'; };
+    fontLink.onload = function () { this.rel = 'stylesheet'; };
     document.head.appendChild(fontLink);
 
     // Preload hero image
@@ -188,7 +205,7 @@ class TemplateEngine {
   initializeForms() {
     // Enhanced form handling with validation
     const forms = document.querySelectorAll('.form');
-    
+
     forms.forEach(form => {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -200,24 +217,24 @@ class TemplateEngine {
   async handleFormSubmit(form) {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
-    
+
     // Remove honeypot field
     delete data.honeypot;
-    
+
     try {
       // Show loading state
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
       submitBtn.textContent = 'Sending...';
       submitBtn.disabled = true;
-      
+
       // Simulate form submission (replace with actual endpoint)
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
+
       // Show success message
       this.showFormMessage(form, 'Message sent successfully! I\'ll get back to you soon.', 'success');
       form.reset();
-      
+
     } catch (error) {
       this.showFormMessage(form, 'Sorry, there was an error. Please try again.', 'error');
     } finally {
@@ -232,13 +249,13 @@ class TemplateEngine {
     if (existingMessage) {
       existingMessage.remove();
     }
-    
+
     const messageEl = document.createElement('div');
     messageEl.className = `form-message form-message-${type}`;
     messageEl.textContent = message;
-    
+
     form.appendChild(messageEl);
-    
+
     setTimeout(() => {
       messageEl.remove();
     }, 5000);
@@ -286,7 +303,7 @@ class TemplateEngine {
         setTimeout(() => {
           const perfData = performance.getEntriesByType('navigation')[0];
           console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
-          
+
           // Log Largest Contentful Paint
           if ('PerformanceObserver' in window) {
             const observer = new PerformanceObserver((list) => {
@@ -300,6 +317,19 @@ class TemplateEngine {
       });
     }
   }
+  updateActiveNavLink() {
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute('href');
+      if (linkPath === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
 }
 
 // Initialize template engine when DOM is ready
@@ -307,8 +337,3 @@ document.addEventListener('DOMContentLoaded', () => {
   window.templateEngine = new TemplateEngine();
   window.templateEngine.logPerformance();
 });
-
-// Export for use in other modules
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = TemplateEngine;
-}

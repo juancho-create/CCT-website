@@ -1,1 +1,11 @@
-{"site": {"name": "Cali Cultural Tours", "tagline": "Your guide to Cali Colombia"}}
+{
+  "site": {
+    "name": "Cali Cultural Tours",
+    "tagline": "Your guide to Cali Colombia",
+    "phone": "+57 316 254 3554",
+    "email": "info@caliculturaltours.com",
+    "whatsapp": "573162543554",
+    "rnt": "RNT 196165",
+    "instagram": "caliculturaltours"
+  }
+}
