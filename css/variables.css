@@ -4,24 +4,30 @@
 
 :root {
   /* Brand Colors - Premium Vibrance */
-  --pink: #FF007F;
-  --pink-dark: #cc0066;
-  --pink-light: #ff4da6;
-  --pink-blush: #fff0f5;
+  --pink: #E91E8C;
+  --pink-dark: #C2185B;
+  --pink-light: #F48FB1;
+  --pink-blush: rgba(233, 30, 140, 0.1);
 
   /* Neutral Colors - Sleek Contrast */
   --white: #FFFFFF;
-  --dark: #0f172a;
-  --gray: #475569;
-  --gray-light: #f8fafc;
+  --dark: #1A1A1A;
+  --gray: #2D2D2D;
+  --gray-light: #FAFAFA;
   --gray-medium: #e2e8f0;
 
+  /* Brand Dark Theme Colors */
+  --fondo-oscuro: #FFF0F5;
+  --fondo-negro: #FCE4EC;
+  --texto-claro: #2C1820;
+  --texto-secundario: #5C3A46;
+
   /* Action Colors */
-  --wa-green: #25D366;
-  --book-teal: #0891b2;
-  --success: #10b981;
-  --warning: #f59e0b;
-  --error: #ef4444;
+  --wa-green: #E91E8C;
+  --book-teal: #E91E8C;
+  --success: #C2185B;
+  --warning: #F48FB1;
+  --error: #C2185B;
 
   /* Typography Scale - High End Editorial */
   --font-size-xs: 0.8rem;
@@ -59,29 +65,29 @@
   --radius-full: 9999px;
 
   /* Shadows - Buttery Smooth Elevation */
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-  --shadow-2xl: 0 35px 60px -15px rgba(0, 0, 0, 0.25);
+  --shadow-sm: 0 4px 6px -1px rgba(233, 30, 140, 0.08), 0 2px 4px -1px rgba(233, 30, 140, 0.05);
+  --shadow-md: 0 10px 15px -3px rgba(233, 30, 140, 0.1), 0 4px 6px -2px rgba(233, 30, 140, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(233, 30, 140, 0.15), 0 10px 10px -5px rgba(233, 30, 140, 0.08);
+  --shadow-xl: 0 25px 50px -12px rgba(233, 30, 140, 0.25);
+  --shadow-2xl: 0 35px 60px -15px rgba(233, 30, 140, 0.35);
   --shadow-glow: 0 10px 40px -10px rgba(255, 0, 127, 0.5);
 
-  /* Transitions */
-  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-base: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Transitions (Error 5 - Premium Bouncy) */
+  --transition-fast: 0.18s cubic-bezier(0.34, 1.4, 0.64, 1);
+  --transition-base: 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
+  --transition-slow: 0.5s cubic-bezier(0.34, 1.4, 0.64, 1);
 
   /* Premium Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.65);
   --glass-bg-dark: rgba(15, 23, 42, 0.75);
   --glass-border: rgba(255, 255, 255, 0.5);
   --glass-blur: blur(20px);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  --glass-shadow: 0 8px 32px 0 rgba(233, 30, 140, 0.1);
 
   /* Gradients */
-  --gradient-pink: linear-gradient(135deg, #FF007F 0%, #cc0066 100%);
-  --gradient-pink-light: linear-gradient(135deg, #ff4da6 0%, #FF007F 100%);
-  --gradient-wa: linear-gradient(135deg, #25D366 0%, #1da851 100%);
-  --gradient-hero: linear-gradient(135deg, rgba(255, 0, 127, 0.9) 0%, rgba(128, 0, 64, 0.95) 100%);
+  --gradient-pink: linear-gradient(135deg, #E91E8C 0%, #C2185B 100%);
+  --gradient-pink-light: linear-gradient(135deg, #F48FB1 0%, #E91E8C 100%);
+  --gradient-wa: linear-gradient(135deg, #E91E8C 0%, #C2185B 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(255, 255, 255, 0.30) 100%);
   --gradient-surface: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 250, 252, 1) 100%);
 }

@@ -5,25 +5,51 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Modern animations and interactions for CCT Website
 document.addEventListener('DOMContentLoaded', function () {
-    // Navbar scroll effect
+    // Navbar scroll effect (Premium Solid -> Blur)
     const navbar = document.querySelector('.navbar');
+    // Inject unbreakable CSS styles immediately
+    const themeFixes = document.createElement('style');
+    themeFixes.innerHTML = `
+        .navbar.scrolled {
+            background-color: var(--fondo-negro) !important;
+            backdrop-filter: blur(16px) !important;
+            -webkit-backdrop-filter: blur(16px) !important;
+            box-shadow: 0 2px 20px rgba(233, 30, 140, 0.15) !important;
+        }
+        .tours-body, .tours-body .container, .tours-grid-container {
+            background-color: var(--fondo-oscuro) !important;
+        }
+        main, body {
+            background-color: var(--fondo-negro) !important;
+            color: var(--texto-claro) !important;
+        }
+    `;
+    document.head.appendChild(themeFixes);
+
     if (navbar) {
         window.addEventListener('scroll', function () {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 80) { // Changed to 80px per Error 1
                 navbar.classList.add('scrolled');
+                navbar.style.setProperty('background-color', 'var(--fondo-negro)', 'important');
             } else {
                 navbar.classList.remove('scrolled');
+                navbar.style.setProperty('background-color', 'rgba(233, 30, 140, 0.15)', 'important');
             }
         });
+
+        // Initial check on load
+        if (window.scrollY <= 80) {
+            navbar.style.setProperty('background-color', 'rgba(233, 30, 140, 0.15)', 'important');
+        }
     }
 
     // GSAP Reveal animations
     const revealElements = document.querySelectorAll('.reveal, .reveal-item');
     revealElements.forEach(el => {
         gsap.fromTo(el,
-            { y: 50, opacity: 0 },
+            { y: 30, opacity: 0 },
             {
-                y: 0, opacity: 1, duration: 0.8, ease: 'power3.out',
+                y: 0, opacity: 1, duration: 0.45, ease: 'back.out(1.4)', // Spring bounce ease
                 scrollTrigger: {
                     trigger: el,
                     start: 'top 85%',
@@ -38,9 +64,9 @@ document.addEventListener('DOMContentLoaded', function () {
     grids.forEach(grid => {
         const items = Array.from(grid.children);
         gsap.fromTo(items,
-            { y: 50, opacity: 0 },
+            { y: 30, opacity: 0 },
             {
-                y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+                y: 0, opacity: 1, duration: 0.45, stagger: 0.07, ease: 'back.out(1.4)', // Spring bounce ease
                 scrollTrigger: {
                     trigger: grid,
                     start: 'top 85%'
@@ -121,6 +147,43 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // MAKE FULL TOUR CARDS CLICKABLE (Error 2 Fix)
+    const cards = document.querySelectorAll('.tour-card, .quick-card');
+
+    cards.forEach(card => {
+        // Find the primary link button inside the card
+        const link = card.querySelector('a.btn-pink, a.btn-outline-pink, a');
+        if (!link) return;
+
+        const destination = link.getAttribute('href');
+
+        // Add accessibility attributes
+        card.style.cursor = 'pointer';
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+
+        // Click event
+        card.addEventListener('click', (e) => {
+            // Prevent double firing if they actually clicked the button itself
+            if (e.target.closest('button, a, input') && e.target !== card) {
+                return;
+            }
+            if (destination) {
+                window.location.href = destination;
+            } else {
+                link.click();
+            }
+        });
+
+        // Keyboard event for accessibility
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.click();
+            }
+        });
+    });
 
     console.log('CCT Modern Animations Engine Initialized');
 });

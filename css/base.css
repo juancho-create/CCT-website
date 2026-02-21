@@ -25,8 +25,9 @@ body {
   font-size: var(--font-size-base);
   font-weight: 400;
   line-height: 1.75;
-  color: var(--dark);
-  background: var(--gray-light);
+  color: var(--texto-claro);
+  background: var(--fondo-oscuro);
+  color: var(--texto-claro);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,20 +40,46 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 800;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
   line-height: 1.15;
-  color: var(--dark);
+  color: var(--texto-claro);
   margin-bottom: var(--space-4);
   letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: var(--font-size-5xl);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
 }
 
 h2 {
-  font-size: var(--font-size-4xl);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #E91E8C;
+  margin: 8px auto 0;
+}
+
+.text-left h2::after {
+  margin: 8px 0 0 0;
+}
+
+.subheading-label {
+  color: #E91E8C;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
 }
 
 h3 {
@@ -108,7 +135,7 @@ img {
   font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-5xl));
   text-align: center;
   margin-bottom: var(--space-6);
-  color: var(--dark);
+  color: var(--texto-claro);
   font-weight: 900;
   letter-spacing: -0.03em;
 }
@@ -123,7 +150,7 @@ img {
 
 .section-subtitle {
   font-size: var(--font-size-lg);
-  color: var(--gray);
+  color: var(--texto-secundario);
   text-align: center;
   margin-bottom: var(--space-12);
   max-width: 600px;
@@ -154,7 +181,8 @@ img {
 }
 
 .bg-gray-light {
-  background: var(--gray-light);
+  background: var(--fondo-oscuro);
+  color: var(--texto-claro);
 }
 
 /* Text helpers */
@@ -171,7 +199,7 @@ img {
 }
 
 .text-gray {
-  color: var(--gray);
+  color: var(--texto-secundario);
 }
 
 /* Content page styles */
@@ -320,13 +348,13 @@ img {
 }
 
 .activity-card h3 {
-  color: var(--dark);
+  color: var(--texto-claro);
   margin-bottom: var(--space-4);
   font-size: var(--font-size-xl);
 }
 
 .activity-card p {
-  color: var(--gray);
+  color: var(--texto-secundario);
   margin-bottom: var(--space-6);
   max-width: none;
 }
@@ -400,4 +428,24 @@ img {
   .blog-categories {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================
+   PREMIUM DARK SCALING (Error 3 overrides)
+   ============================================ */
+section,
+.tours-body,
+main {
+  background-color: var(--fondo-oscuro) !important;
+  color: var(--texto-claro) !important;
+}
+
+body {
+  background-color: var(--fondo-negro);
+  color: var(--texto-claro);
+}
+
+.light-section,
+.bg-light {
+  background-color: var(--fondo-oscuro) !important;
 }

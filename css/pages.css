@@ -34,7 +34,7 @@
   overflow: hidden;
   padding: var(--space-24) var(--space-6) var(--space-20);
   background:
-    linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%),
+    linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(26, 26, 26, 0.30) 100%),
     url('../images/home-hero.jpg') center/cover no-repeat;
   background-attachment: fixed;
 }
@@ -82,8 +82,8 @@
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(3.5rem, 8vw, 6.5rem);
-  color: var(--white);
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  text-shadow: 0 2px 20px rgba(233, 30, 140, 0.4);
   margin-bottom: var(--space-6);
   text-transform: none;
   letter-spacing: -0.03em;
@@ -198,7 +198,7 @@
 
 .quick-nav-card h3 {
   color: var(--dark);
-  font-family: 'Playfair Display', serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
   margin: 0;
@@ -207,7 +207,7 @@
 /* ---- CONTACT SECTION (home) ---- */
 .contact-section {
   padding: 100px 0;
-  background: linear-gradient(180deg, var(--white) 0%, var(--pink-blush) 100%);
+  background-color: var(--fondo-oscuro);
 }
 
 .contact-grid {
@@ -226,7 +226,7 @@
 }
 
 .contact-form-wrapper h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 2.25rem;
   color: var(--pink-dark);
   margin-bottom: 1rem;
@@ -421,7 +421,7 @@
 
 .insta-band p {
   color: var(--white);
-  font-family: 'Playfair Display', serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 700;
   margin-bottom: 20px;
@@ -453,16 +453,16 @@
 }
 
 .tours-hero h1 {
-  color: var(--white);
+  color: var(--texto-claro);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   margin-bottom: var(--space-4);
-  text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 20px rgba(233, 30, 140, 0.4);
 }
 
 .tours-hero p {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--texto-secundario);
   font-size: var(--font-size-lg);
   max-width: 60ch;
   margin: 0 auto;
@@ -519,18 +519,19 @@
 }
 
 .tour-hero h1 {
-  color: var(--white);
+  color: var(--texto-claro);
   font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
-  text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 20px rgba(233, 30, 140, 0.4);
   margin-bottom: 20px;
   letter-spacing: -0.02em;
   animation: fadeInUp 1s ease-out 0.4s both;
+  font-family: 'Playfair Display', serif;
 }
 
 .tour-hero p {
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--texto-secundario);
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   line-height: 1.6;
   font-weight: 400;
@@ -542,43 +543,43 @@
 
 /* Tour-specific gradient overlays */
 .tour-hero--market-tour {
-  background-image: linear-gradient(135deg, rgba(255, 140, 0, 0.7) 0%, rgba(255, 69, 0, 0.8) 50%, rgba(139, 0, 70, 0.9) 100%), url('../images/tours/market-tour-hero.jpg');
+  background-image: linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(255, 255, 255, 0.30) 100%), url('../images/tours/market-tour-hero.jpg');
 }
 
 .tour-hero--hummingbirds {
-  background-image: linear-gradient(135deg, rgba(34, 139, 34, 0.7) 0%, rgba(50, 205, 50, 0.8) 50%, rgba(0, 128, 0, 0.9) 100%), url('../images/tours/hummingbirds-hero.jpg');
+  background-image: linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(255, 255, 255, 0.30) 100%), url('../images/tours/hummingbirds-hero.jpg');
 }
 
 .tour-hero--cristo-rey {
-  background-image: linear-gradient(135deg, rgba(70, 130, 180, 0.7) 0%, rgba(30, 144, 255, 0.8) 50%, rgba(0, 0, 139, 0.9) 100%), url('../images/tours/cristo-rey-hero.jpg');
+  background-image: linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(255, 255, 255, 0.30) 100%), url('../images/tours/cristo-rey-hero.jpg');
 }
 
 .tour-hero--coffee-tasting {
-  background-image: linear-gradient(135deg, rgba(139, 69, 19, 0.7) 0%, rgba(160, 82, 45, 0.8) 50%, rgba(101, 67, 33, 0.9) 100%), url('../images/tours/coffee-tasting-hero.jpg');
+  background-image: linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(255, 255, 255, 0.30) 100%), url('../images/tours/coffee-tasting-hero.jpg');
 }
 
 .tour-hero--coffee-farm {
-  background-image: linear-gradient(135deg, rgba(34, 139, 34, 0.7) 0%, rgba(85, 107, 47, 0.8) 50%, rgba(46, 125, 50, 0.9) 100%), url('../images/tours/coffee-farm-hero.jpg');
+  background-image: linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(255, 255, 255, 0.30) 100%), url('../images/tours/coffee-farm-hero.jpg');
 }
 
 .tour-hero--chocotour {
-  background-image: linear-gradient(135deg, rgba(139, 69, 19, 0.7) 0%, rgba(210, 105, 30, 0.8) 50%, rgba(165, 42, 42, 0.9) 100%), url('../images/tours/chocotour-hero.jpg');
+  background-image: linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(255, 255, 255, 0.30) 100%), url('../images/tours/chocotour-hero.jpg');
 }
 
 .tour-hero--waterfalls {
-  background-image: linear-gradient(135deg, rgba(0, 119, 190, 0.7) 0%, rgba(0, 150, 199, 0.8) 50%, rgba(0, 90, 155, 0.9) 100%), url('../images/tours/waterfalls-hero.jpg');
+  background-image: linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(255, 255, 255, 0.30) 100%), url('../images/tours/waterfalls-hero.jpg');
 }
 
 .tour-hero--whale-watching {
-  background-image: linear-gradient(135deg, rgba(25, 25, 112, 0.7) 0%, rgba(65, 105, 225, 0.8) 50%, rgba(0, 0, 128, 0.9) 100%), url('../images/tours/whale-watching-hero.jpg');
+  background-image: linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(255, 255, 255, 0.30) 100%), url('../images/tours/whale-watching-hero.jpg');
 }
 
 .tour-hero--salsa-tour {
-  background-image: linear-gradient(135deg, rgba(220, 20, 60, 0.7) 0%, rgba(255, 20, 147, 0.8) 50%, rgba(139, 0, 70, 0.9) 100%), url('../images/tours/salsa-tour-hero.jpg');
+  background-image: linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(255, 255, 255, 0.30) 100%), url('../images/tours/salsa-tour-hero.jpg');
 }
 
 .tour-hero--street-food {
-  background-image: linear-gradient(135deg, rgba(255, 140, 0, 0.7) 0%, rgba(255, 69, 0, 0.8) 50%, rgba(255, 20, 147, 0.9) 100%), url('../images/tours/street-food-hero.jpg');
+  background-image: linear-gradient(135deg, rgba(233, 30, 140, 0.72) 0%, rgba(244, 143, 177, 0.45) 60%, rgba(255, 255, 255, 0.30) 100%), url('../images/tours/street-food-hero.jpg');
 }
 
 .tour-hero-content {
@@ -636,17 +637,18 @@
 }
 
 .tour-hero h1 {
-  color: var(--white);
+  color: var(--texto-claro);
   font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
-  text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 20px rgba(233, 30, 140, 0.4);
   margin-bottom: 20px;
   letter-spacing: -0.02em;
+  font-family: 'Playfair Display', serif;
 }
 
 .tour-hero p {
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--texto-secundario);
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   line-height: 1.6;
   font-weight: 400;
@@ -824,13 +826,13 @@
 }
 
 .category-hero h1 {
-  color: var(--white);
+  color: var(--texto-claro);
   font-size: clamp(2rem, 5vw, 4rem);
   margin-bottom: 12px;
 }
 
 .category-hero p {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--texto-secundario);
   font-size: 1.1rem;
 }
 
@@ -842,13 +844,13 @@
 }
 
 .safety-hero h1 {
-  color: var(--white);
+  color: var(--texto-claro);
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 12px;
 }
 
 .safety-hero p {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--texto-secundario);
   font-size: 1.1rem;
 }
 
@@ -1189,4 +1191,50 @@
   .summary-box {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================
+   SECTION SEPARATORS (Error 4 Overrides)
+   ============================================ */
+.features {
+  clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
+  padding-bottom: calc(var(--space-24) + 2%);
+}
+
+.tours {
+  clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+  margin-top: -2%;
+  padding-top: calc(var(--space-20) + 2%);
+}
+
+
+/* ============================================
+   PREMIUM DARK SCALING (Contact Form)
+   ============================================ */
+.contact-form-wrapper,
+.contact-info-card {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(255, 0, 127, 0.3) !important;
+}
+
+.contact-form-wrapper h3,
+.contact-info-card h4 {
+  color: var(--texto-claro) !important;
+}
+
+.contact-form-wrapper p,
+.contact-info-card p,
+.contact-info-card a {
+  color: var(--texto-secundario) !important;
+}
+
+.contact-form-wrapper form label {
+  color: var(--texto-claro) !important;
+}
+
+.contact-form-wrapper form input,
+.contact-form-wrapper form textarea {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-color: rgba(233, 30, 140, 0.2) !important;
+  color: var(--texto-claro) !important;
 }

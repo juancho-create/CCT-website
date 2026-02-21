@@ -1,4 +1,4 @@
-import"./forms-DOYbuzT9.js";const n=document.querySelectorAll(".filter-btn"),c=document.querySelectorAll(".tour-card");document.querySelector(".filter-counter");const i=document.getElementById("tours-grid"),r=document.createElement("div");r.className="no-results";r.innerHTML=`
+import"./forms-Drk8TRVx.js";const n=document.querySelectorAll(".filter-btn"),c=document.querySelectorAll(".tour-card");document.querySelector(".filter-counter");const i=document.getElementById("tours-grid"),r=document.createElement("div");r.className="no-results";r.innerHTML=`
   <i class="fas fa-search"></i>
   <h3>No tours found</h3>
   <p>Try selecting a different category to see more tours.</p>

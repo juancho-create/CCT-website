@@ -8,6 +8,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -19,6 +20,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -30,6 +32,7 @@
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -41,6 +44,7 @@
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -48,21 +52,31 @@
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateX(-50%) translateY(0);
     }
+
     40% {
         transform: translateX(-50%) translateY(-15px);
     }
+
     60% {
         transform: translateX(-50%) translateY(-8px);
     }
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
@@ -73,6 +87,7 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
@@ -83,6 +98,7 @@
     0% {
         background-position: -200% center;
     }
+
     100% {
         background-position: 200% center;
     }
@@ -168,12 +184,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.4),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.4),
+            transparent);
     animation: shimmer 1.5s infinite;
 }
 
@@ -232,9 +246,9 @@
 
 .btn-white:hover {
     background: transparent;
-    color: var(--white);
+    color: var(--pink-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(233, 30, 140, 0.25);
 }
 
 .btn-outline-pink:hover {
@@ -251,7 +265,7 @@
 
 .tour-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(233, 30, 140, 0.2);
 }
 
 .tour-card .tour-card-img img {
@@ -269,7 +283,7 @@
 
 .quick-nav-card:hover {
     transform: translateY(-8px) rotate(-1deg);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 35px rgba(233, 30, 140, 0.15);
 }
 
 .quick-nav-card .card-icon {
@@ -289,7 +303,7 @@
 
 .contact-info-card:hover {
     transform: translateX(8px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(233, 30, 140, 0.15);
 }
 
 /* WhatsApp float button animation */
@@ -321,7 +335,7 @@
 .hero-badge:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(233, 30, 140, 0.3);
 }
 
 /* Mobile menu animations */
@@ -335,7 +349,7 @@
 
 .mobile-menu a:hover {
     transform: translateX(10px);
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--pink-blush);
 }
 
 /* Performance optimizations */
@@ -347,6 +361,7 @@
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
