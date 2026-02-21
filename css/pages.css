@@ -34,8 +34,9 @@
   overflow: hidden;
   padding: var(--space-24) var(--space-6) var(--space-20);
   background:
-    linear-gradient(135deg, rgba(255, 20, 147, 0.85), rgba(139, 0, 70, 0.95)),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%),
     url('../images/home-hero.jpg') center/cover no-repeat;
+  background-attachment: fixed;
 }
 
 .hero::before {
@@ -80,13 +81,13 @@
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
   color: var(--white);
-  text-shadow: 2px 4px 16px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   margin-bottom: var(--space-6);
   text-transform: none;
-  letter-spacing: -1px;
-  line-height: 1.1;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
   font-weight: 900;
 }
 
@@ -492,13 +493,14 @@
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  padding: 40px 30px;
-  background: rgba(0, 0, 0, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  padding: 60px 40px;
+  background: var(--glass-bg-dark);
+  /* Using dark glassmorphism */
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-2xl);
   animation: fadeInUp 1s ease-out;
 }
 
@@ -584,13 +586,14 @@
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  padding: 40px 30px;
-  background: rgba(0, 0, 0, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  padding: 60px 40px;
+  background: var(--glass-bg-dark);
+  /* Premium dark glass */
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-2xl);
   animation: fadeInUp 1s ease-out;
 }
 

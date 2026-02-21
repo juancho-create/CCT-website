@@ -49,6 +49,7 @@ function applyFilter(filter) {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px) scale(0.98)';
             setTimeout(() => {
+                // Ensure it wasn't re-shown in the meantime
                 if (card.style.opacity === '0') {
                     card.style.display = 'none';
                 }

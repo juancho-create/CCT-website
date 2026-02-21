@@ -89,15 +89,14 @@ function handleFormSubmit(e, formId) {
     document.getElementById('overlay')?.classList.add('show');
     document.getElementById('thankYouModal')?.classList.add('show');
 
-    // Redirect to WhatsApp after a delay
-    setTimeout(() => {
-        const safeFirstName = sanitizeInput(data.firstName);
-        const safeLastName = sanitizeInput(data.lastName);
-        const safeBody = sanitizeInput(data.message || data.comments || '');
-        const bodyText = safeBody || "I'm interested in your tours!";
-        const message = `Hi Juan! My name is ${safeFirstName} ${safeLastName}. ${bodyText}`;
-        window.open(`https://wa.me/573162543554?text=${encodeURIComponent(message)}`, '_blank');
-    }, 1500);
+    const safeFirstName = sanitizeInput(data.firstName);
+    const safeLastName = sanitizeInput(data.lastName);
+    const safeBody = sanitizeInput(data.message || data.comments || '');
+    const bodyText = safeBody || "I'm interested in your tours!";
+    const message = `Hi Juan! My name is ${safeFirstName} ${safeLastName}. ${bodyText}`;
+
+    // Open immediately to avoid popup blocker
+    window.open(`https://wa.me/573162543554?text=${encodeURIComponent(message)}`, '_blank');
 
     // Reset form
     form.reset();

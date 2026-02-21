@@ -8,17 +8,24 @@
   top: 0;
   left: 0;
   right: 0;
-  background: var(--pink);
-  padding: 0.75rem 1.5rem;
+  background: transparent;
+  padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-bottom: 1px solid transparent;
 }
 
 .navbar.scrolled {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: var(--glass-bg-dark);
+  /* Dark glass for premium feel */
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-lg);
+  padding: 0.85rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar-brand {
@@ -92,16 +99,43 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 8px;
+  z-index: 1001;
+  /* Above the mobile menu */
 }
 
 .hamburger span {
   display: block;
-  width: 24px;
+  width: 28px;
   height: 2px;
   background: var(--white);
   transition: all 0.3s;
   border-radius: 2px;
+  margin: 6px 0;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Nav Breakpoint */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    /* Changed from block to flex to maintain flex-direction */
+  }
 }
 
 .mobile-menu {
@@ -145,15 +179,69 @@
 }
 
 .mobile-menu-close {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background: none;
-  border: none;
+  display: none;
+  /* Handled by the hamburger becoming an X */
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.mobile-menu-links a {
   color: var(--white);
-  font-size: 2rem;
-  cursor: pointer;
-  line-height: 1;
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.mobile-menu.open .mobile-menu-links a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger transition delays for mobile links */
+.mobile-menu.open .mobile-menu-links a:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.mobile-menu.open .mobile-menu-links a:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.mobile-menu.open .mobile-menu-links a:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.mobile-menu.open .mobile-menu-links a:nth-child(4) {
+  transition-delay: 0.25s;
+}
+
+.mobile-menu.open .mobile-menu-links a:nth-child(5) {
+  transition-delay: 0.3s;
+}
+
+.mobile-menu.open .mobile-menu-links a:nth-child(6) {
+  transition-delay: 0.35s;
+}
+
+.mobile-menu.open .mobile-menu-links a:nth-child(7) {
+  transition-delay: 0.4s;
+}
+
+.mobile-menu.open .mobile-menu-links a:nth-child(8) {
+  transition-delay: 0.45s;
+}
+
+.mobile-menu-links a:hover {
+  color: var(--pink-blush);
+  padding-left: 10px;
 }
 
 /* ---- BUTTONS ---- */
@@ -208,21 +296,41 @@
 
 /* Primary button - high conversion focus */
 .btn-pink {
-  background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%);
+  background: var(--gradient-pink);
   color: var(--white);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 15px rgba(255, 0, 127, 0.3);
   font-weight: 700;
   letter-spacing: 0.5px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-pink::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  box-shadow: var(--shadow-glow);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
 }
 
 .btn-pink:hover {
-  background: linear-gradient(135deg, var(--pink-dark) 0%, var(--pink) 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 20, 147, 0.3);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(255, 0, 127, 0.4);
+}
+
+.btn-pink:hover::after {
+  opacity: 1;
 }
 
 .btn-pink:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.98);
 }
 
 /* Secondary button */
@@ -342,23 +450,25 @@
 .tours-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: var(--space-6);
+  gap: var(--space-8);
 }
 
 .tour-card {
   background: var(--white);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-2xl);
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: all var(--transition-base);
   position: relative;
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--gray-light);
 }
 
 .tour-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-2xl);
+  border-color: var(--pink-blush);
 }
 
 .tour-card-img {
@@ -849,4 +959,67 @@
     border-radius: var(--radius-xl);
     margin: 2rem auto;
   }
+}
+
+/* ---- MODAL STYLES ---- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-2xl);
+  z-index: 10001;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal.show {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-icon {
+  font-size: 3rem;
+  color: var(--pink);
+  margin-bottom: 20px;
+}
+
+.modal h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.modal p {
+  color: var(--gray);
+  margin-bottom: 25px;
+  line-height: 1.6;
 }

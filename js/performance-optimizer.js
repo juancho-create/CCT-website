@@ -13,7 +13,7 @@ class PerformanceOptimizer {
             'images/tours/coffee-farm-hero.jpg',
             'images/tours/chocotour-hero.jpg'
         ];
-        
+
         this.init();
     }
 
@@ -106,7 +106,7 @@ class PerformanceOptimizer {
         fontLink.rel = 'stylesheet';
         fontLink.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap';
         fontLink.media = 'print';
-        fontLink.onload = function() {
+        fontLink.onload = function () {
             this.media = 'all';
         };
         document.head.appendChild(fontLink);
@@ -120,7 +120,7 @@ class PerformanceOptimizer {
                 const entries = list.getEntries();
                 const lastEntry = entries[entries.length - 1];
                 console.log('LCP:', lastEntry.startTime);
-                
+
                 // Send to analytics if needed
                 if (lastEntry.startTime > 2500) {
                     console.warn('LCP is slow, consider optimizing hero images');
@@ -156,37 +156,13 @@ class PerformanceOptimizer {
                 const perfData = performance.getEntriesByType('navigation')[0];
                 const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                 const domTime = perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart;
-                
+
                 console.log(`Page Load: ${loadTime}ms, DOM Ready: ${domTime}ms`);
-                
-                // Show performance badge in development
-                if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-                    this.showPerformanceBadge(loadTime);
-                }
             }, 0);
         });
     }
 
-    showPerformanceBadge(loadTime) {
-        const badge = document.createElement('div');
-        badge.style.cssText = `
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: ${loadTime < 2000 ? '#4CAF50' : loadTime < 3000 ? '#FF9800' : '#F44336'};
-            color: white;
-            padding: 8px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            z-index: 10000;
-            font-family: monospace;
-        `;
-        badge.textContent = `${loadTime}ms`;
-        document.body.appendChild(badge);
 
-        setTimeout(() => badge.remove(), 5000);
-    }
 
     optimizeImages() {
         // Add loading="lazy" to all images that don't have it
@@ -218,20 +194,24 @@ class PerformanceOptimizer {
         `;
         document.head.appendChild(imageStyle);
 
-        // Monitor image loading
+        // Monitor image loading via IntersectionObserver for data-src
         const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
-                    
+
                     if (img.dataset.src) {
                         img.src = img.dataset.src;
                         img.removeAttribute('data-src');
                     }
-                    
-                    img.onload = () => img.classList.add('loaded');
-                    img.onerror = () => img.classList.add('error');
-                    
+
+                    if (img.complete) {
+                        img.classList.add('loaded');
+                    } else {
+                        img.onload = () => img.classList.add('loaded');
+                        img.onerror = () => img.classList.add('error');
+                    }
+
                     imageObserver.unobserve(img);
                 }
             });
@@ -242,6 +222,16 @@ class PerformanceOptimizer {
 
         document.querySelectorAll('img[data-src]').forEach(img => {
             imageObserver.observe(img);
+        });
+
+        // Ensure images without data-src but with standard src also fade in when loaded
+        document.querySelectorAll('img:not([data-src])').forEach(img => {
+            if (img.complete) {
+                img.classList.add('loaded');
+            } else {
+                img.addEventListener('load', () => img.classList.add('loaded'));
+                img.addEventListener('error', () => img.classList.add('error'));
+            }
         });
     }
 
@@ -305,7 +295,7 @@ class PerformanceOptimizer {
     // Throttle function for scroll events
     throttle(func, limit) {
         let inThrottle;
-        return function() {
+        return function () {
             const args = arguments;
             const context = this;
             if (!inThrottle) {
