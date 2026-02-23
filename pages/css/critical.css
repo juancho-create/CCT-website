@@ -21,107 +21,31 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.75;
-  color: #2D2D2D;
-  background: #FFFFFF;
+  color: var(--texto-claro);
+  background: var(--fondo-negro);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Navbar - Critical for navigation */
-.navbar {
-  position: fixed;
-  top: 0;
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
   left: 0;
-  right: 0;
   background: var(--pink);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  backdrop-filter: blur(16px) saturate(180%);
-  border-bottom: 1px solid rgba(233, 30, 140, 0.25);
-  padding: 0.75rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1030;
-  transition: all 0.4s ease;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  color: var(--white);
+  padding: 8px 16px;
   text-decoration: none;
+  z-index: 1001;
+  border-radius: 0 0 8px 0;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-.navbar-brand img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-}
-
-.navbar-brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.navbar-brand-name {
-  color: #FFFFFF;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  line-height: 1.1;
-}
-
-.navbar-brand-sub {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.7rem;
-  font-family: 'Inter', sans-serif;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  list-style: none;
-}
-
-.nav-links a {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.85rem;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: color 0.3s ease;
-  font-family: 'Inter', sans-serif;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #F48FB1;
-  background: transparent;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: #FFFFFF;
-  transition: all 0.3s;
-  border-radius: 2px;
+.skip-link:focus {
+  top: 0;
+  border-radius: 4px;
 }
 
 /* Hero section - Critical for first impression */

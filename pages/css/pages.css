@@ -721,7 +721,7 @@
 
 .tour-body p {
   font-size: 1rem;
-  color: #444;
+  color: var(--texto-secundario);
   line-height: 1.75;
   margin-bottom: 16px;
 }
@@ -734,7 +734,7 @@
 
 .tour-body li {
   font-size: 0.95rem;
-  color: #444;
+  color: var(--texto-secundario);
   line-height: 1.7;
   margin-bottom: 6px;
 }
@@ -820,7 +820,7 @@
 
 .adventure-card p {
   font-size: 0.875rem;
-  color: #555;
+  color: var(--texto-secundario);
   margin: 0;
 }
 
@@ -847,7 +847,7 @@
 .faq-item p {
   margin: 0;
   font-size: 0.9rem;
-  color: #555;
+  color: var(--texto-secundario);
 }
 
 /* ---- CATEGORY PAGES ---- */
@@ -901,7 +901,7 @@
 .safety-body p,
 .safety-body li {
   font-size: 0.95rem;
-  color: #444;
+  color: var(--texto-secundario);
   line-height: 1.75;
   margin-bottom: 8px;
 }
@@ -997,7 +997,7 @@
 .local-card p,
 .local-card li {
   font-size: 0.875rem;
-  color: #555;
+  color: var(--texto-secundario);
   line-height: 1.65;
 }
 
