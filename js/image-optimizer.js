@@ -228,7 +228,10 @@ class ImageOptimizer {
 
 // Initialize image optimizer
 document.addEventListener('DOMContentLoaded', () => {
-    window.imageOptimizer = new ImageOptimizer();
+    // Defer image optimizer to prevent blocking initial render
+    setTimeout(() => {
+        window.imageOptimizer = new ImageOptimizer();
+    }, 150);
 });
 
 // Export for module usage

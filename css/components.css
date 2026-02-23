@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(233, 30, 140, 0.15);
+  background: var(--pink);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   border-bottom: 1px solid rgba(233, 30, 140, 0.25);
@@ -22,7 +22,7 @@
 
 nav.navbar.scrolled,
 header .navbar.scrolled {
-  background: var(--fondo-negro) !important;
+  background: var(--pink) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 2px 20px rgba(233, 30, 140, 0.15);

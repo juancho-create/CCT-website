@@ -108,6 +108,7 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  padding-bottom: var(--space-12);
 }
 
 .hero-ctas .btn {
@@ -120,7 +121,7 @@
 
 .scroll-arrow {
   position: absolute;
-  bottom: var(--space-10);
+  bottom: var(--space-6);
   left: 50%;
   transform: translateX(-50%);
   color: rgba(255, 255, 255, 0.7);
@@ -134,7 +135,12 @@
   color: var(--white);
 }
 
-/* ---- ABOUT SECTION (home) ---- */
+@media (max-width: 768px) {
+  .scroll-arrow {
+    display: none;
+  }
+}
+
 .about-section {
   padding: 100px 0;
   background: var(--pink-blush);
@@ -153,6 +159,32 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
+}
+
+/* Responsive quick-nav grid */
+@media (max-width: 1024px) {
+  .quick-nav-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .quick-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-nav-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .quick-nav-card {
+    padding: 2rem 1.25rem;
+  }
 }
 
 .quick-nav-card {

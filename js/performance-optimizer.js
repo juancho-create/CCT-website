@@ -18,12 +18,17 @@ class PerformanceOptimizer {
     }
 
     init() {
+        // Critical optimizations only
         this.preloadCriticalResources();
-        this.setupResourceHints();
-        this.optimizeFontLoading();
-        this.setupPerformanceMonitoring();
         this.optimizeImages();
-        this.setupServiceWorker();
+        
+        // Defer non-critical optimizations
+        setTimeout(() => {
+            this.setupResourceHints();
+            this.optimizeFontLoading();
+            this.setupPerformanceMonitoring();
+            this.setupServiceWorker();
+        }, 300);
     }
 
     preloadCriticalResources() {

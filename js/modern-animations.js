@@ -4,16 +4,24 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 // Modern animations and interactions for CCT Website
+// Defer animations to prevent blocking initial render
 document.addEventListener('DOMContentLoaded', function () {
+    // Defer non-critical animations
+    setTimeout(() => {
+        initializeAnimations();
+    }, 200);
+});
+
+function initializeAnimations() {
     // Navbar scroll effect (Premium Solid -> Blur)
     const navbar = document.querySelector('.navbar');
     // Inject unbreakable CSS styles immediately
     const themeFixes = document.createElement('style');
     themeFixes.innerHTML = `
         .navbar.scrolled {
-            background-color: var(--fondo-negro) !important;
-            backdrop-filter: blur(16px) !important;
+            background-color: var(--pink) !important;
             -webkit-backdrop-filter: blur(16px) !important;
+            backdrop-filter: blur(16px) !important;
             box-shadow: 0 2px 20px rgba(233, 30, 140, 0.15) !important;
         }
         .tours-body, .tours-body .container, .tours-grid-container {
@@ -30,16 +38,16 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('scroll', function () {
             if (window.scrollY > 80) { // Changed to 80px per Error 1
                 navbar.classList.add('scrolled');
-                navbar.style.setProperty('background-color', 'var(--fondo-negro)', 'important');
+                navbar.style.setProperty('background-color', 'var(--pink)', 'important');
             } else {
                 navbar.classList.remove('scrolled');
-                navbar.style.setProperty('background-color', 'rgba(233, 30, 140, 0.15)', 'important');
+                navbar.style.setProperty('background-color', 'var(--pink)', 'important');
             }
         });
 
         // Initial check on load
         if (window.scrollY <= 80) {
-            navbar.style.setProperty('background-color', 'rgba(233, 30, 140, 0.15)', 'important');
+            navbar.style.setProperty('background-color', 'var(--pink)', 'important');
         }
     }
 
@@ -186,4 +194,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     console.log('CCT Modern Animations Engine Initialized');
-});
+}

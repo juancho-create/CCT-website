@@ -3,11 +3,14 @@
    ============================================ */
 
 :root {
-  /* Brand Colors - Premium Vibrance */
+  /* Brand Colors - Intense Pink */
   --pink: #E91E8C;
-  --pink-dark: #C2185B;
-  --pink-light: #F48FB1;
-  --pink-blush: rgba(233, 30, 140, 0.1);
+  /* Dusty Rose / Soft Pink */
+  --pink-dark: #a94b69;
+  /* Deeper Rose for contrast / hover */
+  --pink-light: #fbe0e6;
+  /* Very light blush for highlights */
+  --pink-blush: rgba(217, 119, 150, 0.1);
 
   /* Neutral Colors - Sleek Contrast */
   --white: #FFFFFF;

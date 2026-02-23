@@ -428,6 +428,45 @@ img {
   .blog-categories {
     grid-template-columns: 1fr;
   }
+
+  /* Prevent horizontal overflow */
+  * {
+    max-width: 100%;
+  }
+
+  /* Ensure images don't overflow */
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Fix navbar padding for mobile */
+  .navbar {
+    padding: 1rem !important;
+  }
+
+  /* Prevent text overflow */
+  * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+
+  /* Additional small screen fixes */
+  .hero-ctas {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 /* ============================================

@@ -34,9 +34,9 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(233, 30, 140, 0.15);
-  backdrop-filter: blur(16px) saturate(180%);
+  background: var(--pink);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
   border-bottom: 1px solid rgba(233, 30, 140, 0.25);
   padding: 0.75rem 1.5rem;
   display: flex;
@@ -207,17 +207,6 @@ body {
   overflow: hidden;
 }
 
-.btn-white {
-  background: transparent;
-  color: #E91E8C;
-  border: 2px solid #E91E8C;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
-
-.btn-white:hover {
-  background: #E91E8C;
-  color: #FFFFFF;
-}
 
 .btn-wa {
   background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
@@ -302,6 +291,40 @@ body {
   font-size: 2rem;
   cursor: pointer;
   line-height: 1;
+}
+
+/* Loading indicator */
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--fondo-negro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+.page-loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(233, 30, 140, 0.3);
+  border-top: 3px solid var(--pink);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Basic responsive for critical content */
