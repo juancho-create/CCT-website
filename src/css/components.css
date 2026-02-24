@@ -77,12 +77,13 @@ header .navbar.scrolled {
 
 .nav-links a {
   color: var(--white) !important;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
   font-weight: 600;
   padding: 6px 10px;
   border-radius: 6px;
   transition: color 0.3s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
 }
 
 .nav-links a:hover,
@@ -258,7 +259,7 @@ header .navbar.scrolled {
   padding: 13px 32px;
   border-radius: 50px;
   font-weight: 600;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-size: var(--font-size-lg);
   line-height: 1;
   text-transform: uppercase;
@@ -672,7 +673,7 @@ header .navbar.scrolled {
   font-size: 0.9rem;
   cursor: pointer;
   transition: all var(--transition-base);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
 }
 
 .filter-btn:hover {
@@ -746,7 +747,7 @@ header .navbar.scrolled {
   padding: 0.875rem 1.25rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--gray-medium);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   background: var(--white);
   transition: all var(--transition-base);

@@ -81,7 +81,8 @@
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-size: clamp(2.5rem, 8vw, 6.5rem);
+  word-break: break-word;
   color: #FFFFFF;
   text-shadow: 0 2px 20px rgba(233, 30, 140, 0.4);
   margin-bottom: var(--space-6);
@@ -142,7 +143,7 @@
 }
 
 .about-section {
-  padding: 100px 0;
+  padding: 4rem 0;
   background: var(--pink-blush);
 }
 
@@ -238,15 +239,23 @@
 
 /* ---- CONTACT SECTION (home) ---- */
 .contact-section {
-  padding: 100px 0;
+  padding: 4rem 0 100px;
   background-color: var(--fondo-oscuro);
 }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 4rem;
+  grid-template-columns: 60% 35%;
+  justify-content: space-between;
+  gap: 2rem;
   align-items: start;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 }
 
 .contact-form-wrapper {
@@ -286,6 +295,7 @@
   box-shadow: var(--shadow-md);
   transition: all var(--transition-base);
   border: 1px solid var(--gray-medium);
+  min-height: 110px;
 }
 
 .contact-info-card:hover {
@@ -373,8 +383,8 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 64px;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   align-items: center;
 }
 
@@ -384,15 +394,17 @@
 }
 
 .about-photo {
-  width: 280px;
-  height: 280px;
+  max-width: 320px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
   border-radius: 50%;
   background: var(--pink);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 6rem;
-  box-shadow: 0 20px 48px rgba(255, 20, 147, 0.25);
+  box-shadow: 0 0 0 4px var(--pink), 0 8px 32px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s;
   overflow: hidden;
 }
@@ -405,6 +417,18 @@
 
 .about-photo:hover {
   transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .about-photo {
+    max-width: 280px;
+  }
 }
 
 .about-content h2 {
@@ -426,22 +450,18 @@
 
 /* ---- CTA BANNER ---- */
 .cta-banner {
-  background: var(--pink);
-  padding: 72px 24px;
+  background: rgba(255, 20, 120, 0.04) !important;
+  padding: 5rem 2rem !important;
   text-align: center;
 }
 
 .cta-banner h2 {
-  color: var(--white);
+  color: var(--texto-claro) !important;
   font-size: clamp(1.6rem, 4vw, 2.8rem);
   margin-bottom: 28px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.cta-banner .btn {
-  border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 /* ---- INSTAGRAM BAND ---- */

@@ -32,6 +32,10 @@
   --warning: #F48FB1;
   --error: #C2185B;
 
+  /* Typography Variables */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
   /* Typography Scale - High End Editorial */
   --font-size-xs: 0.8rem;
   --font-size-sm: 0.95rem;
