@@ -44,3 +44,14 @@ setTimeout(() => {
     }
   });
 }, 2000);
+
+// Animation Failsafe
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('[data-animate], .animate-hidden, .fade-in, .slide-up, .reveal, .reveal-item').forEach(el => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.style.visibility = 'visible';
+    });
+  }, 2500);
+});

@@ -22,8 +22,15 @@
   /* Brand Dark Theme Colors - Improved Contrast */
   --fondo-oscuro: #FFF0F5;
   --fondo-negro: #FCE4EC;
-  --texto-claro: #1A0B12;
-  --texto-secundario: #4A2A38;
+  --texto-claro: var(--text-primary);
+  --texto-secundario: var(--text-body);
+
+  /* New Official Text Color System */
+  --text-primary: #1A0A0F;
+  --text-body: #3D1A24;
+  --text-on-dark: #FFFFFF;
+  --text-accent: #C2185B;
+  --text-muted: #7B3A50;
 
   /* Action Colors */
   --wa-green: #E91E8C;

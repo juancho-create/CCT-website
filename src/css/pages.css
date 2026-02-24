@@ -11,13 +11,13 @@
 
 .page-header h1 {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--pink-dark);
+  color: var(--text-accent);
   margin-bottom: 1rem;
 }
 
 .page-header p {
   font-size: 1.2rem;
-  color: var(--gray);
+  color: var(--text-muted);
   max-width: 900px;
   margin: 0 auto;
 }
@@ -62,11 +62,11 @@
   gap: var(--space-2);
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: var(--white);
+  color: var(--text-on-dark);
   padding: var(--space-2) var(--space-5);
   border-radius: var(--radius-full);
   font-size: var(--font-size-sm);
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: var(--space-8);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -83,7 +83,7 @@
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.5rem, 8vw, 6.5rem);
   word-break: break-word;
-  color: #FFFFFF;
+  color: var(--text-on-dark);
   text-shadow: 0 2px 20px rgba(233, 30, 140, 0.4);
   margin-bottom: var(--space-6);
   text-transform: none;
@@ -94,7 +94,7 @@
 
 .hero p {
   font-size: clamp(var(--font-size-lg), 2.5vw, var(--font-size-xl));
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--text-on-dark);
   margin-bottom: var(--space-12);
   max-width: 70ch;
   margin-left: auto;
@@ -125,7 +125,7 @@
   bottom: var(--space-6);
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-on-dark);
   font-size: var(--font-size-2xl);
   animation: bounce 2s infinite;
   cursor: pointer;
@@ -133,7 +133,7 @@
 }
 
 .scroll-arrow:hover {
-  color: var(--white);
+  color: var(--text-on-dark);
 }
 
 @media (max-width: 768px) {
@@ -214,7 +214,7 @@
   width: 60px;
   height: 60px;
   background: var(--pink-blush);
-  color: var(--pink);
+  color: var(--text-accent);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -225,12 +225,12 @@
 
 .quick-nav-card:hover .card-icon {
   background: var(--pink);
-  color: var(--white);
+  color: var(--text-on-dark);
   transform: scale(1.1) rotate(5deg);
 }
 
 .quick-nav-card h3 {
-  color: var(--texto-claro);
+  color: var(--text-primary);
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
@@ -269,12 +269,12 @@
 .contact-form-wrapper h3 {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 2.25rem;
-  color: var(--pink-dark);
+  color: var(--text-accent);
   margin-bottom: 1rem;
 }
 
 .contact-form-wrapper p {
-  color: var(--texto-secundario);
+  color: var(--text-body);
   margin-bottom: 2.5rem;
   font-size: 1.1rem;
 }
@@ -308,7 +308,7 @@
   width: 50px;
   height: 50px;
   background: var(--pink-blush);
-  color: var(--pink);
+  color: var(--text-accent);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -320,14 +320,14 @@
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--texto-secundario);
+  color: var(--text-body);
   margin-bottom: 0.25rem;
 }
 
 .contact-info-card a,
 .contact-info-card p {
-  color: var(--texto-claro);
-  font-weight: 600;
+  color: var(--text-primary);
+  font-weight: 700;
   text-decoration: none;
   font-size: 1.1rem;
   margin: 0;
@@ -354,7 +354,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--texto-secundario);
+  color: var(--text-body);
   margin-bottom: 0.5rem;
 }
 
@@ -373,7 +373,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--pink);
+  border-color: var(--text-accent);
   box-shadow: 0 0 0 4px var(--pink-blush);
 }
 
@@ -433,19 +433,19 @@
 
 .about-content h2 {
   font-size: 2.2rem;
-  color: var(--pink-dark);
+  color: var(--text-accent);
   margin-bottom: 20px;
 }
 
 .about-content p {
   font-size: 1.05rem;
-  color: var(--texto-secundario);
+  color: var(--text-body);
   line-height: 1.8;
   margin-bottom: 20px;
 }
 
 .about-content strong {
-  color: var(--pink-dark);
+  color: var(--text-accent);
 }
 
 /* ---- CTA BANNER ---- */
@@ -456,7 +456,7 @@
 }
 
 .cta-banner h2 {
-  color: var(--texto-claro) !important;
+  color: var(--text-primary) !important;
   font-size: clamp(1.6rem, 4vw, 2.8rem);
   margin-bottom: 28px;
   max-width: 900px;
@@ -472,7 +472,7 @@
 }
 
 .insta-band p {
-  color: var(--white);
+  color: var(--text-on-dark);
   font-family: 'Barlow Condensed', sans-serif;
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 700;
@@ -480,14 +480,14 @@
 }
 
 .insta-band a {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-on-dark);
   font-size: 0.95rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   transition: color 0.2s;
 }
 
 .insta-band a:hover {
-  color: var(--white);
+  color: var(--text-on-dark);
 }
 
 /* ---- TOUR HUB PAGE ---- */
@@ -499,13 +499,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--white);
+  color: var(--text-on-dark);
   padding: var(--space-32) var(--space-6) var(--space-20);
   position: relative;
 }
 
 .tours-hero h1 {
-  color: var(--white);
+  color: var(--text-on-dark);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-family: 'Playfair Display', serif;
   font-weight: 900;
@@ -514,7 +514,7 @@
 }
 
 .tours-hero p {
-  color: var(--white);
+  color: var(--text-on-dark);
   font-size: var(--font-size-lg);
   max-width: 60ch;
   margin: 0 auto;
@@ -547,24 +547,24 @@
   text-align: center;
   width: 100%;
   padding: 60px 40px;
-  background: var(--glass-bg-dark);
-  /* Using dark glassmorphism */
+  background: rgba(255, 255, 255, 0.18);
+  /* Using light frosted glass */
   -webkit-backdrop-filter: var(--glass-blur);
   backdrop-filter: var(--glass-blur);
   border-radius: var(--radius-2xl);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: var(--shadow-2xl);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 24px rgba(233, 30, 140, 0.1);
   animation: fadeInUp 1s ease-out;
 }
 
 .tour-hero .category-badge {
   display: inline-block;
   background: var(--pink);
-  color: var(--white);
+  color: var(--text-on-dark);
   padding: 8px 16px;
   border-radius: 25px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
@@ -572,11 +572,11 @@
 }
 
 .tour-hero h1 {
-  color: var(--white);
+  color: var(--text-primary);
   font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
-  text-shadow: 0 2px 20px rgba(233, 30, 140, 0.4);
+  text-shadow: none;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
   animation: fadeInUp 1s ease-out 0.4s both;
@@ -584,11 +584,11 @@
 }
 
 .tour-hero p {
-  color: var(--white);
+  color: var(--text-primary);
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   line-height: 1.6;
   font-weight: 400;
-  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: none;
   max-width: 900px;
   margin: 0 auto;
   animation: fadeInUp 1s ease-out 0.6s both;
@@ -641,13 +641,13 @@
   text-align: center;
   width: 100%;
   padding: 60px 40px;
-  background: var(--glass-bg-dark);
-  /* Premium dark glass */
+  background: rgba(255, 255, 255, 0.18);
+  /* Light frosted glass */
   -webkit-backdrop-filter: var(--glass-blur);
   backdrop-filter: var(--glass-blur);
   border-radius: var(--radius-2xl);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: var(--shadow-2xl);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 24px rgba(233, 30, 140, 0.1);
   animation: fadeInUp 1s ease-out;
 }
 
@@ -690,22 +690,22 @@
 }
 
 .tour-hero h1 {
-  color: var(--texto-claro);
+  color: var(--text-primary);
   font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 900;
   line-height: 1.1;
-  text-shadow: 0 2px 20px rgba(233, 30, 140, 0.4);
+  text-shadow: none;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
   font-family: 'Playfair Display', serif;
 }
 
 .tour-hero p {
-  color: var(--texto-secundario);
+  color: var(--text-body);
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   line-height: 1.6;
   font-weight: 500;
-  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: none;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -714,9 +714,9 @@
   text-align: center;
   padding: 12px;
   background: var(--white);
-  color: var(--gray);
+  color: var(--text-muted);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-bottom: 2px solid var(--pink-blush);
@@ -730,7 +730,7 @@
 
 .tour-body h2 {
   font-size: 1.6rem;
-  color: var(--pink-dark);
+  color: var(--text-accent);
   margin: 40px 0 16px;
   padding-bottom: 8px;
   border-bottom: 2px solid var(--pink-blush);
@@ -742,7 +742,7 @@
 
 .tour-body p {
   font-size: 1rem;
-  color: var(--texto-secundario);
+  color: var(--text-body);
   line-height: 1.75;
   margin-bottom: 16px;
 }
@@ -755,13 +755,13 @@
 
 .tour-body li {
   font-size: 0.95rem;
-  color: var(--texto-secundario);
+  color: var(--text-body);
   line-height: 1.7;
   margin-bottom: 6px;
 }
 
 .tour-body li strong {
-  color: var(--dark);
+  color: var(--text-primary);
 }
 
 .included-grid {
@@ -779,7 +779,7 @@
   border-radius: 10px;
   padding: 12px 16px;
   font-size: 0.9rem;
-  color: var(--dark);
+  color: var(--text-primary);
 }
 
 .included-item.yes i {
@@ -815,7 +815,7 @@
 
 .addon-item-price {
   font-weight: 700;
-  color: var(--pink);
+  color: var(--text-accent);
   white-space: nowrap;
 }
 
@@ -835,13 +835,13 @@
 
 .adventure-card h4 {
   font-size: 1rem;
-  color: var(--pink-dark);
+  color: var(--text-accent);
   margin-bottom: 8px;
 }
 
 .adventure-card p {
   font-size: 0.875rem;
-  color: var(--texto-secundario);
+  color: var(--text-body);
   margin: 0;
 }
 
@@ -860,7 +860,7 @@
 
 .faq-item strong {
   display: block;
-  color: var(--texto-claro);
+  color: var(--text-primary);
   margin-bottom: 6px;
   font-size: 0.95rem;
 }
@@ -868,7 +868,7 @@
 .faq-item p {
   margin: 0;
   font-size: 0.9rem;
-  color: var(--texto-secundario);
+  color: var(--text-body);
 }
 
 /* ---- CATEGORY PAGES ---- */
@@ -879,13 +879,13 @@
 }
 
 .category-hero h1 {
-  color: var(--texto-claro);
+  color: var(--text-primary);
   font-size: clamp(2rem, 5vw, 4rem);
   margin-bottom: 12px;
 }
 
 .category-hero p {
-  color: var(--texto-secundario);
+  color: var(--text-body);
   font-size: 1.1rem;
 }
 
@@ -897,13 +897,13 @@
 }
 
 .safety-hero h1 {
-  color: var(--texto-claro);
+  color: var(--text-primary);
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 12px;
 }
 
 .safety-hero p {
-  color: var(--texto-secundario);
+  color: var(--text-body);
   font-size: 1.1rem;
 }
 
@@ -915,14 +915,14 @@
 
 .safety-body h2 {
   font-size: 1.5rem;
-  color: var(--pink-dark);
+  color: var(--text-accent);
   margin: 40px 0 16px;
 }
 
 .safety-body p,
 .safety-body li {
   font-size: 0.95rem;
-  color: var(--texto-secundario);
+  color: var(--text-body);
   line-height: 1.75;
   margin-bottom: 8px;
 }
@@ -954,7 +954,7 @@
 .info-box.pink {
   background: var(--pink-blush);
   border-left: 4px solid var(--pink);
-  color: var(--pink-dark);
+  color: var(--text-accent);
 }
 
 .info-box strong {
@@ -972,7 +972,7 @@
 
 .emergency-card {
   background: var(--pink);
-  color: var(--white);
+  color: var(--text-on-dark);
   border-radius: 12px;
   padding: 20px;
   text-align: center;
@@ -1011,14 +1011,14 @@
 
 .local-card h3 {
   font-size: 1.1rem;
-  color: var(--pink-dark);
+  color: var(--text-accent);
   margin-bottom: 10px;
 }
 
 .local-card p,
 .local-card li {
   font-size: 0.875rem;
-  color: var(--texto-secundario);
+  color: var(--text-body);
   line-height: 1.65;
 }
 
@@ -1045,7 +1045,7 @@
   border-radius: 0 10px 10px 0;
   padding: 14px 20px;
   font-size: 0.9rem;
-  color: var(--texto-claro);
+  color: var(--text-primary);
   margin-bottom: 16px;
 }
 
@@ -1066,7 +1066,7 @@
 
 .day-name {
   background: var(--pink);
-  color: var(--white);
+  color: var(--text-on-dark);
   border-radius: 8px;
   padding: 6px;
   text-align: center;
@@ -1082,7 +1082,7 @@
   border-radius: 6px;
   padding: 8px 10px;
   font-size: 0.75rem;
-  color: var(--texto-claro);
+  color: var(--text-primary);
   margin-bottom: 6px;
   font-weight: 500;
   cursor: pointer;
@@ -1091,7 +1091,7 @@
 
 .day-activity:hover {
   background: var(--pink);
-  color: var(--white);
+  color: var(--text-on-dark);
 }
 
 .day-activity.food {
@@ -1107,7 +1107,7 @@
 }
 
 .day-activity.night {
-  border-left: 3px solid var(--texto-claro);
+  border-left: 3px solid var(--text-primary);
 }
 
 /* ---- BLOG PAGE ---- */
@@ -1148,20 +1148,20 @@
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--pink);
+  color: var(--text-accent);
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
 
 .blog-card h3 {
   font-size: 1.1rem;
-  color: var(--texto-claro);
+  color: var(--text-primary);
   margin-bottom: 10px;
 }
 
 .blog-card p {
   font-size: 0.875rem;
-  color: var(--texto-secundario);
+  color: var(--text-body);
   line-height: 1.6;
   margin-bottom: 16px;
 }
@@ -1173,7 +1173,7 @@
   border-radius: 12px;
   padding: 20px;
   font-size: 0.9rem;
-  color: var(--texto-secundario);
+  color: var(--text-body);
 }
 
 /* ---- RESPONSIVE PAGES ---- */
@@ -1277,22 +1277,22 @@
 
 .contact-form-wrapper h3,
 .contact-info-card h4 {
-  color: var(--texto-claro) !important;
+  color: var(--text-primary) !important;
 }
 
 .contact-form-wrapper p,
 .contact-info-card p,
 .contact-info-card a {
-  color: var(--texto-secundario) !important;
+  color: var(--text-body) !important;
 }
 
 .contact-form-wrapper form label {
-  color: var(--texto-claro) !important;
+  color: var(--text-primary) !important;
 }
 
 .contact-form-wrapper form input,
 .contact-form-wrapper form textarea {
   background: rgba(255, 255, 255, 0.5) !important;
   border-color: rgba(233, 30, 140, 0.2) !important;
-  color: var(--texto-claro) !important;
+  color: var(--text-primary) !important;
 }

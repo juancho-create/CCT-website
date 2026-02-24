@@ -13,6 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initializeAnimations() {
+    // Force Hero animations immediately
+    document.querySelectorAll('.hero [data-animate], .hero .animate-hidden, .hero .reveal, .hero .reveal-item, .tours-hero .reveal, .tours-hero .reveal-item').forEach((el, i) => {
+        setTimeout(() => {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+            el.style.visibility = 'visible';
+            el.classList.add('animate-visible');
+            el.classList.add('active');
+        }, i * 100);
+    });
+
     // Navbar scroll effect (Premium Solid -> Blur)
     const navbar = document.querySelector('.navbar');
     // Inject unbreakable CSS styles immediately
@@ -60,14 +71,16 @@ function initializeAnimations() {
 
     // GSAP Reveal animations
     const revealElements = document.querySelectorAll('.reveal, .reveal-item');
-    revealElements.forEach(el => {
+    const filteredRevs = Array.from(revealElements).filter(el => !el.closest('.hero') && !el.closest('.tours-hero'));
+
+    filteredRevs.forEach(el => {
         gsap.fromTo(el,
             { y: 30, opacity: 0 },
             {
                 y: 0, opacity: 1, duration: 0.45, ease: 'back.out(1.4)', // Spring bounce ease
                 scrollTrigger: {
                     trigger: el,
-                    start: 'top 85%',
+                    start: 'top 95%',
                     toggleActions: 'play none none reverse'
                 }
             }
@@ -84,7 +97,7 @@ function initializeAnimations() {
                 y: 0, opacity: 1, duration: 0.45, stagger: 0.07, ease: 'back.out(1.4)', // Spring bounce ease
                 scrollTrigger: {
                     trigger: grid,
-                    start: 'top 85%'
+                    start: 'top 95%'
                 }
             }
         );

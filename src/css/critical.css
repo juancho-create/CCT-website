@@ -21,7 +21,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.75;
-  color: var(--texto-claro);
+  color: var(--text-primary);
   background: var(--fondo-negro);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -34,12 +34,12 @@ body {
   top: -40px;
   left: 0;
   background: var(--pink);
-  color: var(--white);
+  color: var(--text-on-dark);
   padding: 8px 16px;
   text-decoration: none;
   z-index: 1001;
   border-radius: 0 0 8px 0;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.3s ease;
 }
 
@@ -76,11 +76,11 @@ body {
   gap: 8px;
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #FFFFFF;
+  color: var(--text-on-dark);
   padding: 8px 20px;
   border-radius: 9999px;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 32px;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -89,7 +89,7 @@ body {
 
 .hero h1 {
   font-size: clamp(2.25rem, 7vw, 3rem);
-  color: #FFFFFF;
+  color: var(--text-on-dark);
   text-shadow: 0 2px 20px rgba(233, 30, 140, 0.4);
   margin-bottom: 24px;
   text-transform: uppercase;
@@ -101,7 +101,7 @@ body {
 
 .hero p {
   font-size: clamp(1.125rem, 2.5vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--text-on-dark);
   margin-bottom: 48px;
   max-width: 600px;
   margin-left: auto;
@@ -118,7 +118,7 @@ body {
   gap: 8px;
   padding: 16px 32px;
   border-radius: 12px;
-  font-weight: 600;
+  font-weight: 700;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1;
@@ -134,7 +134,7 @@ body {
 
 .btn-wa {
   background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
-  color: #FFFFFF;
+  color: var(--text-on-dark);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   font-weight: 700;
 }
@@ -163,10 +163,10 @@ body {
   top: -40px;
   left: 0;
   background: #FF1493;
-  color: #FFFFFF;
+  color: var(--text-on-dark);
   padding: 8px 16px;
   z-index: 1070;
-  font-weight: 600;
+  font-weight: 700;
   font-family: 'Inter', sans-serif;
   transition: top 0.15s ease-in-out;
   border-radius: 0 0 8px 0;
@@ -194,9 +194,9 @@ body {
 }
 
 .mobile-menu a {
-  color: #FFFFFF;
+  color: var(--text-on-dark);
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 700;
   font-family: 'Playfair Display', serif;
   transition: opacity 0.2s;
 }
@@ -211,7 +211,7 @@ body {
   right: 1.5rem;
   background: none;
   border: none;
-  color: #FFFFFF;
+  color: var(--text-on-dark);
   font-size: 2rem;
   cursor: pointer;
   line-height: 1;

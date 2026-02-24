@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="/src/css/variables.css">
@@ -20,6 +20,173 @@
   <link rel="stylesheet" href="/src/css/components.css">
   <link rel="stylesheet" href="/src/css/pages.css">
   <link rel="stylesheet" href="/src/css/animations.css">
+
+  <style id="index-scoped-overrides">
+    /* TASK 1 - Typography */
+    :root {
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem) !important;
+      font-weight: 900 !important;
+      font-family: var(--font-heading) !important;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .section-title,
+    .cta-banner h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem) !important;
+      font-weight: 700 !important;
+      font-family: var(--font-heading) !important;
+    }
+
+    body,
+    p,
+    li,
+    a {
+      font-size: 1rem;
+      line-height: 1.7;
+      font-weight: 400;
+      font-family: var(--font-body);
+    }
+
+    .btn {
+      font-size: 0.875rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.08em !important;
+      min-height: 44px !important;
+    }
+
+    /* TASK 2 - Fix Juan Camilo Photo Section */
+    @media (min-width: 768px) {
+      .about-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 3rem !important;
+        align-items: center !important;
+      }
+
+      .about-content {
+        order: 1 !important;
+      }
+
+      .about-photo {
+        order: 2 !important;
+        margin: 0 auto !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .about-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+      }
+
+      .about-content {
+        order: 1 !important;
+      }
+
+      .about-photo {
+        order: 2 !important;
+      }
+    }
+
+    .about-photo {
+      max-width: 300px !important;
+      width: 100% !important;
+      aspect-ratio: 1 / 1 !important;
+      border-radius: 50% !important;
+      box-shadow: 0 0 0 4px #E91E8C, 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+      overflow: hidden !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: none !important;
+    }
+
+    .about-photo img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      border-radius: 50% !important;
+    }
+
+    /* TASK 3 - Fix Invisible CTA Section */
+    .cta-banner {
+      background: rgba(233, 30, 140, 0.05) !important;
+      padding: 5rem 2rem !important;
+      text-align: center !important;
+    }
+
+    .cta-banner h2 {
+      color: var(--text-primary) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .cta-banner .btn {
+      background: linear-gradient(135deg, #E91E8C 0%, #C2185B 100%) !important;
+      color: #FFFFFF !important;
+      border: none !important;
+      box-shadow: 0 4px 15px rgba(233, 30, 140, 0.35) !important;
+    }
+
+    /* TASK 4 - Fix Form Section */
+    @media (min-width: 768px) {
+      .contact-grid {
+        display: grid !important;
+        grid-template-columns: 60% 35% !important;
+        gap: 2rem !important;
+        align-items: start !important;
+        justify-content: space-between !important;
+      }
+    }
+
+    .contact-section {
+      padding-top: 4rem !important;
+      min-height: auto !important;
+    }
+
+    .contact-info-wrapper {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+      width: 100% !important;
+    }
+
+    .contact-info-card {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* TASK 5 - Reduce Dead Whitespace */
+    .about-section,
+    .quick-nav {
+      padding: 4rem 0 !important;
+    }
+
+    /* TASK 6 - Mobile Check */
+    @media (max-width: 767px) {
+      * {
+        max-width: 100vw !important;
+      }
+
+      .contact-grid,
+      .about-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3rem !important;
+      }
+    }
+  </style>
 
   <meta name="description"
     content="Discover Cali, Colombia with Juan Camilo — licensed local tour guide. Food tours, salsa experiences, nature adventures & more. RNT 196165.">
