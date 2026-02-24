@@ -5,24 +5,24 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'pages/index.html'),
-                tours: resolve(__dirname, 'pages/tours.html'),
-                safety: resolve(__dirname, 'pages/safety.html'),
-                localInfo: resolve(__dirname, 'pages/local-info.html'),
-                map: resolve(__dirname, 'pages/map.html'),
-                activities: resolve(__dirname, 'pages/activities.html'),
-                blog: resolve(__dirname, 'pages/blog.html'),
-                contact: resolve(__dirname, 'pages/contact.html'),
-                chocotour: resolve(__dirname, 'pages/chocotour.html'),
-                coffeeFarm: resolve(__dirname, 'pages/coffee-farm.html'),
-                coffeeTasting: resolve(__dirname, 'pages/coffee-tasting.html'),
-                cristoRey: resolve(__dirname, 'pages/cristo-rey.html'),
-                hummingbirds: resolve(__dirname, 'pages/hummingbirds.html'),
-                marketTour: resolve(__dirname, 'pages/market-tour.html'),
-                salsaTour: resolve(__dirname, 'pages/salsa-tour.html'),
-                streetFood: resolve(__dirname, 'pages/street-food.html'),
-                waterfalls: resolve(__dirname, 'pages/waterfalls.html'),
-                whaleWatching: resolve(__dirname, 'pages/whale-watching.html')
+                main: resolve(__dirname, 'index.html'),
+                tours: resolve(__dirname, 'tours.html'),
+                safety: resolve(__dirname, 'safety.html'),
+                localInfo: resolve(__dirname, 'local-info.html'),
+                map: resolve(__dirname, 'map.html'),
+                activities: resolve(__dirname, 'activities.html'),
+                blog: resolve(__dirname, 'blog.html'),
+                contact: resolve(__dirname, 'contact.html'),
+                chocotour: resolve(__dirname, 'chocotour.html'),
+                coffeeFarm: resolve(__dirname, 'coffee-farm.html'),
+                coffeeTasting: resolve(__dirname, 'coffee-tasting.html'),
+                cristoRey: resolve(__dirname, 'cristo-rey.html'),
+                hummingbirds: resolve(__dirname, 'hummingbirds.html'),
+                marketTour: resolve(__dirname, 'market-tour.html'),
+                salsaTour: resolve(__dirname, 'salsa-tour.html'),
+                streetFood: resolve(__dirname, 'street-food.html'),
+                waterfalls: resolve(__dirname, 'waterfalls.html'),
+                whaleWatching: resolve(__dirname, 'whale-watching.html')
             }
         }
     }
