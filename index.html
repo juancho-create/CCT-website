@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cali Cultural Tours</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+
+  <style id="index-scoped-overrides">
+    /* TASK 1 - Typography */
+    :root {
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem) !important;
+      font-weight: 900 !important;
+      font-family: var(--font-heading) !important;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .section-title,
+    .cta-banner h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem) !important;
+      font-weight: 700 !important;
+      font-family: var(--font-heading) !important;
+    }
+
+    body,
+    p,
+    li,
+    a {
+      font-size: 1rem;
+      line-height: 1.7;
+      font-weight: 400;
+      font-family: var(--font-body);
+    }
+
+    .btn {
+      font-size: 0.875rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.08em !important;
+      min-height: 44px !important;
+    }
+
+    /* TASK 2 - Fix Juan Camilo Photo Section */
+    @media (min-width: 768px) {
+      .about-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 3rem !important;
+        align-items: center !important;
+      }
+
+      .about-content {
+        order: 1 !important;
+      }
+
+      .about-photo {
+        order: 2 !important;
+        margin: 0 auto !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .about-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+      }
+
+      .about-content {
+        order: 1 !important;
+      }
+
+      .about-photo {
+        order: 2 !important;
+      }
+    }
+
+    .about-photo {
+      max-width: 300px !important;
+      width: 100% !important;
+      aspect-ratio: 1 / 1 !important;
+      border-radius: 50% !important;
+      box-shadow: 0 0 0 4px #E91E8C, 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+      overflow: hidden !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: none !important;
+    }
+
+    .about-photo img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      border-radius: 50% !important;
+    }
+
+    /* TASK 3 - Fix Invisible CTA Section */
+    .cta-banner {
+      background: rgba(233, 30, 140, 0.05) !important;
+      padding: 5rem 2rem !important;
+      text-align: center !important;
+    }
+
+    .cta-banner h2 {
+      color: var(--text-primary) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .cta-banner .btn {
+      background: linear-gradient(135deg, #E91E8C 0%, #C2185B 100%) !important;
+      color: #FFFFFF !important;
+      border: none !important;
+      box-shadow: 0 4px 15px rgba(233, 30, 140, 0.35) !important;
+    }
+
+    /* TASK 4 - Fix Form Section */
+    @media (min-width: 768px) {
+      .contact-grid {
+        display: grid !important;
+        grid-template-columns: 60% 35% !important;
+        gap: 2rem !important;
+        align-items: start !important;
+        justify-content: space-between !important;
+      }
+    }
+
+    .contact-section {
+      padding-top: 4rem !important;
+      min-height: auto !important;
+    }
+
+    .contact-info-wrapper {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+      width: 100% !important;
+    }
+
+    .contact-info-card {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* TASK 5 - Reduce Dead Whitespace */
+    .about-section,
+    .quick-nav {
+      padding: 4rem 0 !important;
+    }
+
+    /* TASK 6 - Mobile Check */
+    @media (max-width: 767px) {
+      * {
+        max-width: 100vw !important;
+      }
+
+      .contact-grid,
+      .about-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3rem !important;
+      }
+    }
+  </style>
+
+  <meta name="description"
+    content="Discover Cali, Colombia with Juan Camilo — licensed local tour guide. Food tours, salsa experiences, nature adventures & more. RNT 196165.">
+
+  <!-- Global Styles (Imported via JS for Vite compatibility) -->
+
+  <link rel="preload" href="/CCT-website/images/home-hero.jpg" as="image">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS Variables -->
+
+  <script type="module" crossorigin src="/CCT-website/assets/forms-WvHEI2VJ.js"></script>
+  <link rel="stylesheet" crossorigin href="/CCT-website/assets/forms-JeHNbt2n.css">
+</head>
+
+<body>
+  <!-- Loading Indicator -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Component -->
+  <header id="header-placeholder">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="navbar-brand">
+        <img src="/CCT-website/images/logo.jpg" alt="Juan Camilo - Cali Cultural Tours" loading="lazy">
+        <div class="navbar-brand-text">
+          <div class="navbar-brand-name">Cali Cultural Tours</div>
+          <div class="navbar-brand-sub">Your guide to Cali Colombia · RNT 196165</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="safety.html">Safety</a></li>
+        <li><a href="local-info.html">Local Info</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.instagram.com/caliculturaltours/" target="_blank" rel="noopener"
+            class="nav-instagram"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" id="closeMenu">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="mobile-menu-links">
+        <a href="index.html">Home</a>
+        <a href="tours.html">Tours</a>
+        <a href="safety.html">Safety</a>
+        <a href="local-info.html">Local Info</a>
+        <a href="map.html">Map</a>
+        <a href="activities.html">Activities</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-certificate"></i>
+          <span>RNT 196165 · Licensed Professional Guide</span>
+        </div>
+        <h1>Cali is soul. <br>Discover its true spirit.</h1>
+        <p>Experience authentic Colombian culture with us. Personalised tours, local secrets,
+          and unforgettable memories.</p>
+        <div class="hero-ctas">
+          <a href="tours.html" class="btn btn-pink btn-lg">Browse Tours</a>
+          <a href="https://wa.me/573162543554" class="btn btn-white btn-lg" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Chat Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Nav Cards -->
+    <section class="quick-nav">
+      <div class="container">
+        <div class="quick-nav-grid">
+          <a class="quick-nav-card reveal" href="safety.html">
+            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Safety First</h3>
+          </a>
+          <a class="quick-nav-card reveal" href="local-info.html">
+            <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+            <h3>Local Life</h3>
+          </a>
+          <a class="quick-nav-card reveal" href="map.html">
+            <div class="card-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h3>Secret Spots</h3>
+          </a>
+          <a class="quick-nav-card reveal" href="activities.html">
+            <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
+            <h3>What's On</h3>
+          </a>
+          <a class="quick-nav-card reveal" href="tours.html">
+            <div class="card-icon"><i class="fas fa-route"></i></div>
+            <h3>All Tours</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Juan -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content reveal">
+            <h2>Heritage, Passion <br>& Local Soul</h2>
+            <p>I'm Juan Camilo, born and raised in the heart of Cali. Since 2022, I've dedicated my life to sharing the
+              vibrant spirit of my home with the world.</p>
+            <p>Tourism isn't just my job; it's my bridge to global cultures. I melt at the sight of a dog, chase hidden
+              waterfalls, and believe that the best way to know a city is through its people and its food.</p>
+            <p><strong>Cali is COOLtural. Let me show you why.</strong></p>
+            <a href="contact.html" class="btn btn-pink">Get to know me</a>
+          </div>
+          <div class="about-photo reveal">
+            <img src="/CCT-website/images/about-image.jfif" alt="Juan Camilo - Your Local Guide" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner reveal">
+      <div class="container">
+        <h2>Ready for an authentic adventure?</h2>
+        <a href="tours.html" class="btn btn-pink btn-lg">Explore the Tours</a>
+      </div>
+    </section>
+
+    <!-- Contact Teaser -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-form-wrapper reveal">
+            <h3>Let's Personalise Your Trip</h3>
+            <p>Have something specific in mind? I specialise in flexible, custom experiences. Drop me a message and
+              let's craft your perfect Cali story.</p>
+            <form id="homeContactForm" class="form">
+              <input type="text" name="honeypot" style="display:none" tabindex="-1">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" name="firstName" placeholder="Juan" required>
+                </div>
+                <div class="form-group">
+                  <label>Last Name</label>
+                  <input type="text" name="lastName" placeholder="Camilo" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="hello@example.com" required>
+              </div>
+              <div class="form-group">
+                <label>WhatsApp Number</label>
+                <input type="tel" name="whatsapp" placeholder="+57..." required>
+              </div>
+              <div class="form-group">
+                <label>Your Vision</label>
+                <textarea name="comments" rows="4" placeholder="Tell me what you're dreaming of..."></textarea>
+              </div>
+              <div class="form-submit">
+                <button type="submit" class="btn btn-pink btn-lg">Send Message</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-info-wrapper">
+            <div class="contact-info-card reveal">
+              <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/573162543554" target="_blank" rel="noopener">Direct Chat</a>
+              </div>
+            </div>
+            <div class="contact-info-card reveal">
+              <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>info@caliculturaltours.com</p>
+              </div>
+            </div>
+            <div class="contact-info-card reveal">
+              <div class="contact-info-icon"><i class="fab fa-instagram"></i></div>
+              <div>
+                <h4>Instagram</h4>
+                <a href="https://www.instagram.com/caliculturaltours/" target="_blank"
+                  rel="noopener">@caliculturaltours</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer-placeholder">
+    <footer class="footer">
+      <div class="footer-tagline">"Showing Cali's true soul — one tour at a time"</div>
+      <div class="footer-contact">
+        <a href="mailto:info@caliculturaltours.com">info@caliculturaltours.com</a>
+        <a href="https://wa.me/573162543554" target="_blank" rel="noopener">+57 316 254 3554</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://wa.me/573162543554" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/caliculturaltours" target="_blank" rel="noopener"><i
+            class="fab fa-instagram"></i></a>
+        <a href="mailto:info@caliculturaltours.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="footer-copy">
+        ©2024 Cali Cultural Tours · RNT 196165 · Proudly showing Cali's soul.
+      </div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="thankYouModal">
+      <div class="modal-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h3>Message Sent!</h3>
+      <p>Thanks for reaching out! Juan will get back to you as soon as possible.</p>
+      <button class="btn btn-pink" onclick="closeModal()">Close</button>
+    </div>
+
+    <a href="https://wa.me/573162543554" class="wa-float" target="_blank" rel="noopener"
+      aria-label="Contact Juan on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+</body>
+
+</html>
