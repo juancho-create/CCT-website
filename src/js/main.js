@@ -1,4 +1,6 @@
-﻿
+﻿import { inject } from '@vercel/analytics';
+inject();
+
 // Loading indicator management
 const pageLoader = document.getElementById('pageLoader');
 if (pageLoader) {
