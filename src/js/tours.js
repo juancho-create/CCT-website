@@ -28,7 +28,8 @@ function applyFilter(filter) {
     let visibleCount = 0;
 
     // Update active button
-    filterBtns.forEach(btn => {
+    const currentFilterBtns = document.querySelectorAll('.filter-btn');
+    currentFilterBtns.forEach(btn => {
         if (btn.dataset.filter === filter) {
             btn.classList.add('active');
         } else {
@@ -37,14 +38,14 @@ function applyFilter(filter) {
     });
 
     // Filter cards with smooth transition
-    tourCards.forEach(card => {
+    const currentTourCards = document.querySelectorAll('.tour-card');
+    currentTourCards.forEach(card => {
         if (filter === 'all' || card.dataset.category === filter) {
             card.style.display = 'flex';
-            // Use requestAnimationFrame instead of forced reflow
-            window.requestAnimationFrame(() => {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0) scale(1)';
-            });
+            // Force reflow to ensure transition works, but avoid jumping
+            card.offsetWidth;
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0) scale(1)';
             visibleCount++;
         } else {
             card.style.opacity = '0';
@@ -82,31 +83,43 @@ function applyFilter(filter) {
     setTimeout(() => announcement.remove(), 1000);
 }
 
-if (filterBtns.length > 0 && tourCards.length > 0) {
-    // Initialize - show all tours on load
-    applyFilter('all');
+function initializeTours() {
+    // Re-query elements just in case they weren't ready
+    const currentFilterBtns = document.querySelectorAll('.filter-btn');
+    const currentTourCards = document.querySelectorAll('.tour-card');
 
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            applyFilter(btn.dataset.filter);
+    if (currentFilterBtns.length > 0 && currentTourCards.length > 0) {
+        // Initialize - show all tours on load
+        applyFilter('all');
+
+        currentFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                applyFilter(btn.dataset.filter);
+            });
         });
-    });
 
-    // Add keyboard navigation for filter buttons
-    filterBtns.forEach((btn, index) => {
-        btn.setAttribute('tabindex', '0');
+        // Add keyboard navigation for filter buttons
+        currentFilterBtns.forEach((btn, index) => {
+            btn.setAttribute('tabindex', '0');
 
-        btn.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-                e.preventDefault();
-                const nextIndex = e.key === 'ArrowRight'
-                    ? (index + 1) % filterBtns.length
-                    : (index - 1 + filterBtns.length) % filterBtns.length;
-                filterBtns[nextIndex].focus();
-            } else if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                btn.click();
-            }
+            btn.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    const nextIndex = e.key === 'ArrowRight'
+                        ? (index + 1) % currentFilterBtns.length
+                        : (index - 1 + currentFilterBtns.length) % currentFilterBtns.length;
+                    currentFilterBtns[nextIndex].focus();
+                } else if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    btn.click();
+                }
+            });
         });
-    });
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeTours);
+} else {
+    initializeTours();
 }

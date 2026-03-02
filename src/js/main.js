@@ -1,6 +1,9 @@
 ﻿import { inject } from '@vercel/analytics';
 inject();
 
+import './tour-sticky-cta.js';
+import './exit-intent.js';
+
 // Loading indicator management
 const pageLoader = document.getElementById('pageLoader');
 if (pageLoader) {
