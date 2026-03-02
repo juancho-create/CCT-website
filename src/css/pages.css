@@ -492,7 +492,7 @@
 
 /* ---- TOUR HUB PAGE ---- */
 .tours-hero {
-  background: var(--gradient-hero), url('/images/tours-hero.jpg') center/cover no-repeat;
+  background: var(--gradient-hero), url('/images/home-hero.jpg') center/cover no-repeat;
   min-height: 50vh;
   display: flex;
   flex-direction: column;

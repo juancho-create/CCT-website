@@ -27,7 +27,6 @@ class PerformanceOptimizer {
             this.setupResourceHints();
             this.optimizeFontLoading();
             this.setupPerformanceMonitoring();
-            this.setupServiceWorker();
         }, 300);
     }
 
@@ -238,50 +237,6 @@ class PerformanceOptimizer {
                 img.addEventListener('error', () => img.classList.add('error'));
             }
         });
-    }
-
-    setupServiceWorker() {
-        // Register service worker for caching (if available)
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-                .then(registration => {
-                    console.log('SW registered:', registration);
-                })
-                .catch(error => {
-                    console.log('SW registration failed:', error);
-                });
-        }
-    }
-
-    // Optimize critical rendering path
-    optimizeCriticalRenderingPath() {
-        // Inline critical CSS for above-the-fold content
-        const criticalCSS = `
-            body {
-                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-                margin: 0;
-                padding: 0;
-            }
-            .navbar {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                background: #FF1493;
-                z-index: 1000;
-            }
-            .hero {
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: linear-gradient(135deg, rgba(255, 20, 147, 0.85), rgba(139, 0, 70, 0.95));
-            }
-        `;
-
-        const style = document.createElement('style');
-        style.textContent = criticalCSS;
-        document.head.insertBefore(style, document.head.firstChild);
     }
 
     // Debounce function for performance
