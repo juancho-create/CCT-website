@@ -1485,3 +1485,63 @@
     position: static;
   }
 }
+
+/* ============================================
+   CALENDAR PAGE (activities.html)
+   ============================================ */
+#calendar-page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.calendar-card {
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.calendar-iframe {
+  width: 100%;
+  min-height: 650px;
+  border: none;
+  display: block;
+}
+
+.pink-info-box {
+  background-color: var(--pink-blush);
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.pink-info-box h4 {
+  color: var(--text-accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.pink-info-box p {
+  color: var(--text-body);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  #calendar-page-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .calendar-iframe {
+    min-height: 500px;
+    height: 500px;
+  }
+
+  .pink-info-box {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1.5rem;
+  }
+}
