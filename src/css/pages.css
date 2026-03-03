@@ -1450,3 +1450,49 @@
   color: var(--text-body);
   line-height: 1.6;
 }
+
+/* ============================================
+   TOUR DETAIL PAGES: 2-COLUMN LAYOUT
+   ============================================ */
+.tour-page-container {
+  max-width: 1200px !important;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.tour-details-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2%;
+  width: 100%;
+}
+
+.tour-main-content {
+  width: 63%;
+  flex-shrink: 0;
+}
+
+.tour-sidebar {
+  width: 35%;
+  flex-shrink: 0;
+  position: sticky;
+  top: 100px;
+}
+
+@media (max-width: 768px) {
+  .tour-details-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .tour-main-content,
+  .tour-sidebar {
+    width: 100%;
+  }
+
+  .tour-sidebar {
+    position: relative;
+    top: 0;
+  }
+}
