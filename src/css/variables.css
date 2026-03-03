@@ -11,6 +11,11 @@
   --white: #FAFAFA;
   --accent: #FFD700;
 
+  /* Official Brand Overrides */
+  --brand-primary: #FF0055;
+  --brand-dark: #1A0A10;
+  --navbar-bg: #FF0055;
+
   /* Legacy mappings to prevent breakage */
   --pink: var(--pink-hot);
   --pink-dark: #D40047;

@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background: var(--dark);
+  background: var(--navbar-bg);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   border-bottom: 1px solid transparent;
@@ -23,7 +23,7 @@
 
 nav.navbar.scrolled,
 header .navbar.scrolled {
-  background: var(--dark) !important;
+  background: var(--navbar-bg) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
@@ -76,26 +76,36 @@ header .navbar.scrolled {
 }
 
 .nav-links a {
-  color: var(--text-on-dark) !important;
+  color: var(--white) !important;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   font-weight: 700;
   padding: 6px 10px;
   border-radius: 6px;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   font-family: var(--font-body);
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--text-primary) !important;
-  background: transparent;
+  color: var(--white) !important;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .nav-links a.active {
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--white);
   border-radius: 0;
   text-decoration: none;
+  background: transparent;
+}
+
+.navbar .btn {
+  background: var(--white) !important;
+  color: var(--brand-primary) !important;
+}
+
+.navbar .btn:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
 }
 
 .hamburger {
