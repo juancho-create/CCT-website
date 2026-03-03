@@ -3,45 +3,46 @@
    ============================================ */
 
 :root {
-  /* Brand Colors - Intense Pink */
-  --pink: #E91E8C;
-  /* Dusty Rose / Soft Pink */
-  --pink-dark: #a94b69;
-  /* Deeper Rose for contrast / hover */
-  --pink-light: #fbe0e6;
-  /* Very light blush for highlights */
-  --pink-blush: rgba(217, 119, 150, 0.1);
+  /* Brand Luxury Colors */
+  --pink-hot: #FF0055;
+  --pink-soft: #FFE8F0;
+  --dark: #0F0A0A;
+  --mid: #5C4A52;
+  --white: #FAFAFA;
+  --accent: #FFD700;
 
-  /* Neutral Colors - Sleek Contrast */
-  --white: #FFFFFF;
-  --dark: #1A1A1A;
-  --gray: #2D2D2D;
-  --gray-light: #FAFAFA;
-  --gray-medium: #e2e8f0;
+  /* Legacy mappings to prevent breakage */
+  --pink: var(--pink-hot);
+  --pink-dark: #D40047;
+  --pink-light: var(--pink-soft);
+  --pink-blush: var(--pink-soft);
 
-  /* Brand Dark Theme Colors - Improved Contrast */
-  --fondo-oscuro: #FFF0F5;
-  --fondo-negro: #FCE4EC;
-  --texto-claro: var(--text-primary);
-  --texto-secundario: var(--text-body);
+  --gray: var(--mid);
+  --gray-light: #F5F5F5;
+  --gray-medium: #E0E0E0;
+
+  --fondo-oscuro: var(--white);
+  --fondo-negro: var(--white);
+  --texto-claro: var(--dark);
+  --texto-secundario: var(--mid);
 
   /* New Official Text Color System */
-  --text-primary: #1A0A0F;
-  --text-body: #3D1A24;
-  --text-on-dark: #FFFFFF;
-  --text-accent: #C2185B;
-  --text-muted: #7B3A50;
+  --text-primary: var(--dark);
+  --text-body: var(--mid);
+  --text-on-dark: var(--white);
+  --text-accent: var(--pink-hot);
+  --text-muted: var(--mid);
 
   /* Action Colors */
-  --wa-green: #E91E8C;
-  --book-teal: #E91E8C;
-  --success: #C2185B;
-  --warning: #F48FB1;
-  --error: #C2185B;
+  --wa-green: #25D366;
+  --book-teal: var(--pink-hot);
+  --success: #25D366;
+  --warning: var(--accent);
+  --error: #FF3333;
 
   /* Typography Variables */
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-heading: 'Clash Display', system-ui, sans-serif;
+  --font-body: 'Satoshi', system-ui, sans-serif;
 
   /* Typography Scale - High End Editorial */
   --font-size-xs: 0.8rem;

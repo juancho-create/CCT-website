@@ -84,42 +84,40 @@ function applyFilter(filter) {
 }
 
 function initializeTours() {
-    // Re-query elements just in case they weren't ready
     const currentFilterBtns = document.querySelectorAll('.filter-btn');
     const currentTourCards = document.querySelectorAll('.tour-card');
 
-    if (currentFilterBtns.length > 0 && currentTourCards.length > 0) {
-        // Initialize - show all tours on load
-        applyFilter('all');
+    // Initialize - show all tours on load
+    applyFilter('all');
 
-        currentFilterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                applyFilter(btn.dataset.filter);
-            });
+    currentFilterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            applyFilter(btn.dataset.filter);
         });
+    });
 
-        // Add keyboard navigation for filter buttons
-        currentFilterBtns.forEach((btn, index) => {
-            btn.setAttribute('tabindex', '0');
+    // Add keyboard navigation for filter buttons
+    currentFilterBtns.forEach((btn, index) => {
+        btn.setAttribute('tabindex', '0');
 
-            btn.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    const nextIndex = e.key === 'ArrowRight'
-                        ? (index + 1) % currentFilterBtns.length
-                        : (index - 1 + currentFilterBtns.length) % currentFilterBtns.length;
-                    currentFilterBtns[nextIndex].focus();
-                } else if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    btn.click();
-                }
-            });
+        btn.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                const nextIndex = e.key === 'ArrowRight'
+                    ? (index + 1) % currentFilterBtns.length
+                    : (index - 1 + currentFilterBtns.length) % currentFilterBtns.length;
+                currentFilterBtns[nextIndex].focus();
+            } else if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                btn.click();
+            }
         });
-    }
+    });
 }
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeTours);
-} else {
+// Ensure DOM is fully parsed
+document.addEventListener('DOMContentLoaded', initializeTours);
+// If module runs after DOMContentLoaded, the listener might not fire. So also call it if already interactive/complete.
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
     initializeTours();
 }
