@@ -1457,7 +1457,7 @@
 .tour-layout {
   display: grid;
   grid-template-columns: 1fr 340px;
-  gap: 48px;
+  gap: 32px;
   align-items: start;
   /* CRITICAL — without this sticky breaks */
   max-width: 1200px;
@@ -1471,7 +1471,7 @@
 
 .tour-sidebar {
   position: sticky;
-  top: 100px;
+  top: 80px;
   align-self: start;
   /* CRITICAL */
 }
