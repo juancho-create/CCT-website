@@ -305,14 +305,14 @@ header .navbar.scrolled {
   border-radius: 0;
   padding: 13px 32px;
   font-weight: 700;
-  box-shadow: 0 2px 10px rgba(255, 0, 85, 0.2);
+  box-shadow: 0 2px 10px rgba(233, 30, 140, 0.2);
   letter-spacing: 0.5px;
   border: none;
 }
 
 .btn-pink:hover {
   transform: scale(1.02);
-  box-shadow: 0 8px 25px rgba(255, 0, 85, 0.4);
+  box-shadow: 0 8px 25px rgba(233, 30, 140, 0.4);
 }
 
 .btn-pink:active {
@@ -744,8 +744,8 @@ header .navbar.scrolled {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #FF0055;
-  box-shadow: inset 3px 0 0 #FF0055;
+  border-color: #E91E8C;
+  box-shadow: inset 3px 0 0 #E91E8C;
 }
 
 .form-message {

@@ -4,7 +4,7 @@
 
 :root {
   /* Brand Luxury Colors */
-  --pink-hot: #FF0055;
+  --pink-hot: #E91E8C;
   --pink-soft: #FFE8F0;
   --dark: #0F0A0A;
   --mid: #5C4A52;
@@ -12,9 +12,9 @@
   --accent: #FFD700;
 
   /* Official Brand Overrides */
-  --brand-primary: #FF0055;
+  --brand-primary: #E91E8C;
   --brand-dark: #1A0A10;
-  --navbar-bg: #FF0055;
+  --navbar-bg: #E91E8C;
 
   /* Legacy mappings to prevent breakage */
   --pink: var(--pink-hot);
