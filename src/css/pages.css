@@ -1102,7 +1102,7 @@
   .includes-grid {
     grid-template-columns: 1fr;
   }
-}}
+}
 
 .tour-hero-content {
   max-width: 900px;
