@@ -2116,6 +2116,13 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   align-items: start;
+  max-width: 600px;
+}
+
+/* Related tour cards are visible by default (no animation) */
+.related-tours-grid .tour-card {
+  opacity: 1;
+  transform: none;
 }
 
 /* Card image sizing for related tours */
