@@ -46,10 +46,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
     radial-gradient(ellipse at 70% 80%, rgba(0, 0, 0, 0.4) 0%, transparent 50%),
-    linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+    linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
   pointer-events: none;
 }
 
@@ -65,16 +65,47 @@
 }
 
 @keyframes grain {
-  0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-5%, -5%); }
-  20% { transform: translate(-10%, 5%); }
-  30% { transform: translate(5%, -10%); }
-  40% { transform: translate(-5%, 15%); }
-  50% { transform: translate(-10%, 5%); }
-  60% { transform: translate(15%, 0%); }
-  70% { transform: translate(0%, 10%); }
-  80% { transform: translate(-15%, 0%); }
-  90% { transform: translate(10%, 5%); }
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-5%, -5%);
+  }
+
+  20% {
+    transform: translate(-10%, 5%);
+  }
+
+  30% {
+    transform: translate(5%, -10%);
+  }
+
+  40% {
+    transform: translate(-5%, 15%);
+  }
+
+  50% {
+    transform: translate(-10%, 5%);
+  }
+
+  60% {
+    transform: translate(15%, 0%);
+  }
+
+  70% {
+    transform: translate(0%, 10%);
+  }
+
+  80% {
+    transform: translate(-15%, 0%);
+  }
+
+  90% {
+    transform: translate(10%, 5%);
+  }
 }
 
 .hero-content {
@@ -100,7 +131,7 @@
   margin-bottom: var(--space-8);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -111,7 +142,7 @@
 .hero-badge:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
-  box-shadow: 
+  box-shadow:
     0 12px 40px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
@@ -124,8 +155,17 @@
 }
 
 @keyframes pulse-star {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.2); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
 }
 
 /* MASSIVE Typography */
@@ -134,7 +174,7 @@
   font-size: clamp(3rem, 10vw, 8rem);
   word-break: break-word;
   color: var(--text-on-dark);
-  text-shadow: 
+  text-shadow:
     0 4px 30px rgba(0, 0, 0, 0.3),
     0 2px 10px rgba(233, 30, 140, 0.3);
   margin-bottom: var(--space-6);
@@ -146,7 +186,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.2));
 }
 
 .hero p {
@@ -156,7 +196,7 @@
   max-width: 600px;
   line-height: 1.6;
   font-weight: 400;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-ctas {
@@ -185,7 +225,7 @@
 .hero-ctas .btn-pink {
   background: linear-gradient(135deg, var(--pink) 0%, #ff6b9d 100%);
   border: none;
-  box-shadow: 
+  box-shadow:
     0 10px 30px rgba(233, 30, 140, 0.4),
     0 0 0 1px rgba(255, 255, 255, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
@@ -199,13 +239,13 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left 0.6s ease;
 }
 
 .hero-ctas .btn-pink:hover {
   transform: translateY(-3px);
-  box-shadow: 
+  box-shadow:
     0 20px 40px rgba(233, 30, 140, 0.5),
     0 0 0 2px rgba(255, 255, 255, 0.3);
 }
@@ -254,7 +294,7 @@
   justify-content: center;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   max-width: 90vw;
@@ -764,8 +804,8 @@
 .tour-detail-grid {
   display: grid;
   grid-template-columns: 1fr 360px;
-  align-items: start;
   gap: 60px;
+  align-items: start;
 }
 
 @media (max-width: 1024px) {
@@ -801,7 +841,8 @@
 .tour-carousel::before {
   content: '';
   display: block;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio */
 }
 
 .tour-carousel-track-container {
@@ -919,10 +960,10 @@
   background: white;
   border-radius: 24px;
   padding: 32px;
-  box-shadow: 
+  box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 20px 40px -10px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .booking-card-price {
@@ -1129,13 +1170,13 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .tour-content-grid .tour-sidebar {
     position: relative;
     top: 0;
     order: -1;
   }
-  
+
   .booking-card {
     max-width: 500px;
     margin: 0 auto;
@@ -1146,19 +1187,19 @@
   .tour-header {
     padding: 60px 20px 30px;
   }
-  
+
   .tour-gallery-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 150px 150px;
     gap: 8px;
     border-radius: 12px;
   }
-  
+
   .tour-gallery-item:first-child {
     grid-row: 1 / 2;
     grid-column: 1 / 3;
   }
-  
+
   .includes-grid {
     grid-template-columns: 1fr;
   }
@@ -2043,6 +2084,7 @@
     padding: 1.5rem;
   }
 }
+
 /* ============================================
    SAFETY PAGE FIXES
    ============================================ */
@@ -2098,7 +2140,7 @@
   .content-page {
     padding: 0 1rem;
   }
-  
+
   .info-grid {
     grid-template-columns: 1fr;
   }
@@ -2152,15 +2194,40 @@
    ============================================ */
 
 /* Margin utilities */
-.mt-10 { margin-top: 0.625rem; }
-.mt-20 { margin-top: 1.25rem; }
-.mt-30 { margin-top: 1.875rem; }
-.mt-60 { margin-top: 3rem; }
+.mt-10 {
+  margin-top: 0.625rem;
+}
 
-.mb-20 { margin-bottom: 1.25rem; }
-.mb-30 { margin-bottom: 1.875rem; }
-.mb-40 { margin-bottom: 2.5rem; }
-.mb-60 { margin-bottom: 2.5rem; }
+.mt-20 {
+  margin-top: 1.25rem;
+}
+
+.mt-30 {
+  margin-top: 1.875rem;
+}
+
+.mt-60 {
+  margin-top: 3rem;
+}
+
+.mb-20 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-30 {
+  margin-bottom: 1.875rem;
+}
+
+.mb-40 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-60 {
+  margin-bottom: 2.5rem;
+}
 
 /* Padding utilities */
-.py-60 { padding-top: 3rem; padding-bottom: 3rem; }
+.py-60 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
