@@ -82,28 +82,6 @@
     }
 }
 
-@keyframes popIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-@keyframes shimmer {
-    0% {
-        background-position: -200% center;
-    }
-
-    100% {
-        background-position: 200% center;
-    }
-}
-
 /* Reveal Animation Classes */
 .reveal {
     opacity: 0;
@@ -116,15 +94,10 @@
     transform: translateY(0);
 }
 
-.reveal.animate-in {
-    animation: fadeInUp 0.8s ease forwards;
-}
-
 /* Staggered animations for grid items */
 .tour-card,
 .quick-nav-card,
-.blog-card,
-.activity-card {
+.blog-card {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -132,80 +105,9 @@
 
 .tour-card.animate-in,
 .quick-nav-card.animate-in,
-.blog-card.animate-in,
-.activity-card.animate-in {
+.blog-card.animate-in {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Page transitions */
-.page {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.page.active {
-    display: block;
-    opacity: 1;
-}
-
-.page.active .content-page {
-    display: block !important;
-}
-
-.page.active .page-header {
-    display: block;
-}
-
-.page.active h1,
-.page.active h2,
-.page.active h3,
-.page.active h4,
-.page.active p,
-.page.active ul,
-.page.active .tip-box,
-.page.active .blog-categories,
-.page.active .activities-grid,
-.page.active .map-container {
-    display: block;
-}
-
-/* Loading animations */
-.loading {
-    position: relative;
-    overflow: hidden;
-}
-
-.loading::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, 0.4),
-            transparent);
-    animation: shimmer 1.5s infinite;
-}
-
-/* Hover animation utilities */
-.hover-lift {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover-lift:hover {
-    transform: translateY(-4px);
-}
-
-.hover-scale {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover-scale:hover {
-    transform: scale(1.05);
 }
 
 /* Button micro-interactions */
@@ -351,13 +253,6 @@
 .mobile-menu a:hover {
     transform: translateX(10px);
     color: var(--pink-blush);
-}
-
-/* Performance optimizations */
-.gpu-accelerated {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
 }
 
 /* Reduced motion support */
