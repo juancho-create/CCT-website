@@ -10,7 +10,7 @@ replacements = {
     'Â©': '©',
     'ðŸ”¥': '🔥',
     'ðŸŒ®': '🌮',
-    'ðŸ¥‘': '🥑',
+    'ðŸ‘': '🥑',
     'â˜•': '☕',
     'ðŸŒ¿': '🌿',
     'ðŸ «': '🍫',
@@ -19,13 +19,19 @@ replacements = {
     'ðŸ ¦': '🐦',
     'ðŸŒŠ': '🌊',
     'ðŸ ‹': '🐋',
-    'Ã ' : 'à'
+    'Ã ': 'à',
+    'â˜…': '★'
 }
 
 def fix_file(filepath):
     try:
-        with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
-            content = f.read()
+        with open(filepath, 'rb') as f:
+            raw = f.read()
+        
+        # We try to treat the file as UTF-8 but it's already corrupted in the byte stream
+        # because of how it was rewritten earlier.
+        # Actually, the characters I see in view_file are what's IN the file now.
+        content = raw.decode('utf-8', errors='ignore')
         
         new_content = content
         for old, new in replacements.items():
