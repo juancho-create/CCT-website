@@ -2115,25 +2115,30 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  align-items: start;
-  max-width: 600px;
+  width: 100%;
+  overflow: visible;
 }
 
 /* Related tour cards are visible by default (no animation) */
 .related-tours-grid .tour-card {
   opacity: 1;
   transform: none;
+  width: 100%;
+  overflow: visible;
+  min-width: 0;
 }
 
 /* Card image sizing for related tours */
 .related-tours-grid .tour-card-img {
+  width: 100%;
   height: 180px;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .related-tours-grid .tour-card-img img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
