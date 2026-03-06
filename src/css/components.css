@@ -56,7 +56,7 @@ header .navbar.scrolled {
 
 .navbar-brand-name {
   color: var(--text-on-dark);
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-heading), sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -186,7 +186,7 @@ header .navbar.scrolled {
   color: var(--text-on-dark);
   font-size: 1.4rem;
   font-weight: 700;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-heading), sans-serif;
   transition: opacity 0.2s;
 }
 
@@ -210,7 +210,7 @@ header .navbar.scrolled {
   color: var(--text-on-dark);
   font-size: clamp(1.5rem, 6vw, 2.5rem);
   font-weight: 700;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-heading), sans-serif;
   text-decoration: none;
   transition: all 0.3s;
   opacity: 0;
@@ -366,26 +366,26 @@ header .navbar.scrolled {
 
 /* WhatsApp button - high visibility */
 .btn-wa {
-  background: linear-gradient(135deg, var(--wa-green) 0%, #1da851 100%);
+  background: linear-gradient(135deg, var(--wa-green) 0%, var(--whatsapp-dark) 100%);
   color: var(--text-on-dark);
   box-shadow: var(--shadow-md);
   font-weight: 700;
 }
 
 .btn-wa:hover {
-  background: linear-gradient(135deg, #1da851 0%, var(--wa-green) 100%);
+  background: linear-gradient(135deg, var(--whatsapp-dark) 0%, var(--wa-green) 100%);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
 
 /* Teal button */
 .btn-teal {
-  background: linear-gradient(135deg, var(--book-teal) 0%, #00838f 100%);
+  background: linear-gradient(135deg, var(--book-teal) 0%, var(--teal-dark) 100%);
   color: var(--text-on-dark);
 }
 
 .btn-teal:hover {
-  background: linear-gradient(135deg, #00838f 0%, var(--book-teal) 100%);
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--book-teal) 100%);
   transform: translateY(-1px);
 }
 
@@ -801,7 +801,7 @@ header .navbar.scrolled {
 }
 
 .no-results h3 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: 1.75rem;
   color: var(--text-accent);
   margin-bottom: 0.5rem;
@@ -848,7 +848,7 @@ header .navbar.scrolled {
 .form-group select::placeholder,
 .form-group textarea::placeholder {
   font-style: italic;
-  color: #A09398;
+  color: var(--text-mid);
 }
 
 .form-group input:focus,
@@ -889,7 +889,7 @@ header .navbar.scrolled {
 }
 
 .footer-tagline {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-heading), sans-serif;
   font-style: italic;
   font-size: var(--font-size-xl);
   color: var(--pink-light);
@@ -1335,7 +1335,7 @@ header .navbar.scrolled {
 }
 
 .modal h3 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: 1.8rem;
   color: var(--text-primary);
   margin-bottom: 10px;
@@ -1371,4 +1371,52 @@ header .navbar.scrolled {
 .info-card p,
 .blog-category-card p {
   color: var(--text-body) !important;
+}
+/* ============================================
+   UTILITY CLASSES — Inline Style Replacements
+   ============================================ */
+
+/* Tour card popular badge - gold gradient */
+.badge-popular {
+  left: auto;
+  right: 12px;
+  background: var(--badge-gold);
+  color: var(--badge-gold-text);
+}
+
+/* Tour card emoji icon wrapper */
+.card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+/* Tour card rating display */
+.card-rating {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+/* About section stats row container */
+.about-stats-row {
+  display: flex;
+  gap: 30px;
+  margin: 30px 0;
+  border-top: 1px solid var(--gray-medium);
+  border-bottom: 1px solid var(--gray-medium);
+  padding: 20px 0;
+}
+
+/* Stat number in about section */
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  line-height: 1;
+}
+
+/* Separator dot in hero trust bar */
+.separator-dot {
+  opacity: 0.6;
 }

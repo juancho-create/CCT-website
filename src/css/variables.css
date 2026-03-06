@@ -40,10 +40,19 @@
 
   /* Action Colors */
   --wa-green: #25D366;
+  --whatsapp-dark: #1da851;
   --book-teal: var(--pink-hot);
+  --teal-dark: #00838f;
   --success: #25D366;
   --warning: var(--accent);
   --error: #FF3333;
+
+  /* Badge Colors */
+  --badge-gold: linear-gradient(135deg, #FFD700, #FFA500);
+  --badge-gold-text: #000000;
+
+  /* Text Colors */
+  --text-mid: #A09398;
 
   /* Typography Variables */
   --font-heading: 'Clash Display', system-ui, sans-serif;
