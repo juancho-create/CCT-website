@@ -458,7 +458,7 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 60% 35%;
+  grid-template-columns: 1.5fr 1fr;
   justify-content: space-between;
   gap: 2rem;
   align-items: start;
@@ -799,6 +799,7 @@
 .tour-detail-wrapper {
   background: var(--white);
   padding: 40px 0 80px;
+  overflow: visible;
 }
 
 .tour-detail-grid {
@@ -806,6 +807,7 @@
   grid-template-columns: 1fr 360px;
   gap: 60px;
   align-items: start;
+  overflow: visible;
 }
 
 @media (max-width: 1024px) {
@@ -951,9 +953,11 @@
 
 /* Right Column - Sticky Sidebar */
 .tour-sidebar {
+  position: -webkit-sticky;
   position: sticky;
   top: 100px;
   align-self: start;
+  height: fit-content;
 }
 
 .booking-card {
