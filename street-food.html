@@ -5,12 +5,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Street Food Tour in Cali | Cali Cultural Tours</title>
-<link href="src/css/variables.css?v=2" rel="stylesheet"/>
-<link href="src/css/base.css?v=2" rel="stylesheet"/>
-<link href="src/css/critical.css?v=2" rel="stylesheet"/>
-<link href="src/css/components.css?v=2" rel="stylesheet"/>
-<link href="src/css/pages.css?v=2" rel="stylesheet"/>
-<link href="src/css/animations.css?v=2" rel="stylesheet"/>
+<link href="src/css/variables.css?v=3" rel="stylesheet"/>
+<link href="src/css/base.css?v=3" rel="stylesheet"/>
+<link href="src/css/critical.css?v=3" rel="stylesheet"/>
+<link href="src/css/components.css?v=3" rel="stylesheet"/>
+<link href="src/css/pages.css?v=3" rel="stylesheet"/>
+<link href="src/css/animations.css?v=3" rel="stylesheet"/>
 <meta content="Taste authentic street food while discovering the stories that give Cali its flavor." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -67,96 +67,156 @@
 </div>
 </header>
 <main id="main-content">
-<div class="page-header reveal tour-hero--street-food" style="min-height: 60vh; background: linear-gradient(rgba(15,10,10,0.7), rgba(15,10,10,0.7)), url('images/tours/street-food-hero.jpg') center/cover no-repeat; display: flex; align-items: flex-end; padding-bottom: 60px; text-align: left;">
-<div class="container" style="width: 100%; max-width: 1200px; margin: 0 auto;">
-<div style="font-size: 0.9rem; color: var(--white); opacity: 0.7; margin-bottom: 20px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;">
-          Home &gt; Tours &gt; <span style="color: var(--white); opacity: 1;">Street Food Tour</span>
+<!-- Clean Header -->
+<section class="tour-header">
+<div class="container">
+<span class="category-badge">Culinary Adventure</span>
+<h1>Street Food &amp; Stories</h1>
+<p>Taste the real Cali. A walking culinary journey through the neighborhoods and flavors that define our soul.</p>
 </div>
-<span class="category-badge" style="background: var(--dark); color: var(--white); padding: 6px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 15px; display: inline-block;">Culinary
-          Adventure</span>
-<h1 style="color: var(--white); font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.05; margin-bottom: 15px; max-width: 800px;">
-          Street Food &amp; Stories</h1>
-<p style="color: var(--white); opacity: 0.8; font-size: 1.2rem; max-width: 600px; margin: 0;">Taste the real
-          Cali. A walking culinary journey through the neighborhoods and flavors that define our soul.</p>
-</div>
-</div>
-<div class="container mt-40 reveal">
-<div class="carousel">
-<div class="carousel-track-container">
-<ul class="carousel-track">
-<li class="carousel-slide active"><img alt="Street Food Experience 1" decoding="async" loading="eager" src="images/tours/streed-food/20230115_172916.jpg"/></li>
-<li class="carousel-slide"><img alt="Street Food Experience 2" decoding="async" loading="lazy" src="images/tours/streed-food/20230201_174057.jpg"/></li>
-<li class="carousel-slide"><img alt="Street Food Experience 3" decoding="async" loading="lazy" src="images/tours/streed-food/FinalSelects20230122_1789.jpg"/></li>
-<li class="carousel-slide"><img alt="Street Food Experience 4" decoding="async" loading="lazy" src="images/tours/streed-food/FinalSelects20230122_1792.jpg"/></li>
-</ul>
-</div>
-<button aria-label="Previous image" class="carousel-button carousel-button--prev"><i class="fas fa-chevron-left"></i></button>
-<button aria-label="Next image" class="carousel-button carousel-button--next"><i class="fas fa-chevron-right"></i></button>
-<div class="carousel-nav">
-<button aria-label="Go to slide 1" class="carousel-indicator active"></button>
-<button aria-label="Go to slide 2" class="carousel-indicator"></button>
-<button aria-label="Go to slide 3" class="carousel-indicator"></button>
-<button aria-label="Go to slide 4" class="carousel-indicator"></button>
-</div>
-</div>
-</div>
-<div class="tour-page-container container d-none-if-needed" style="margin-top: 60px;">
-<div class="tour-layout">
-<div class="tour-main reveal">
-<section class="tour-description mb-40">
-<h2 class="section-title" style="margin-top: 0;">The Flavor of Cali</h2>
-<p>This walking tour is a sensory exploration of Cali's street life. We'll wander through historic
-              neighborhoods, meeting the vendors and artisans who have kept our traditions alive for generations. From
-              crispy empanadas to ancestral Viche moonshine, every bite tells a story of community and resilience.</p>
 </section>
-<section class="tour-itinerary mb-40">
-<h2 class="section-title">The Experience</h2>
-<div class="itinerary-timeline" style="position: relative; padding-left: 30px; border-left: 2px solid var(--gray-medium);">
-<div class="timeline-item" style="position: relative; margin-bottom: 30px;">
-<span style="position: absolute; left: -43px; top: 0; background: var(--pink-hot); color: var(--white); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">1</span>
-<h4 style="margin: 0 0 10px; font-weight: 700;">Salsa &amp; Street Art</h4>
-<p style="margin: 0; color: var(--text-body);">Walk the Boulevard del Río and discover the creative
-                  resilience of Barrio Obrero's visual culture at La Linterna poster workshop.</p>
+
+<!-- Photo Gallery Grid -->
+<section class="tour-gallery">
+<div class="container">
+<div class="tour-gallery-grid">
+<div class="tour-gallery-item">
+<img alt="Street Food Experience 1" loading="eager" src="images/tours/streed-food/20230115_172916.jpg"/>
+<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
 </div>
-<div class="timeline-item" style="position: relative; margin-bottom: 30px;">
-<span style="position: absolute; left: -43px; top: 0; background: var(--pink-hot); color: var(--white); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">2</span>
-<h4 style="margin: 0 0 10px; font-weight: 700;">The Heritage Quarter</h4>
-<p style="margin: 0; color: var(--text-body);">Explore San Antonio's cobblestone streets, visiting
-                  family-owned bakeries and community projects that protect our architecture.</p>
+<div class="tour-gallery-item">
+<img alt="Street Food Experience 2" loading="lazy" src="images/tours/streed-food/20230201_174057.jpg"/>
+<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
 </div>
-<div class="timeline-item" style="position: relative; margin-bottom: 30px;">
-<span style="position: absolute; left: -43px; top: 0; background: var(--pink-hot); color: var(--white); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">3</span>
-<h4 style="margin: 0 0 10px; font-weight: 700;">Ancestral Tastes</h4>
-<p style="margin: 0; color: var(--text-body);">Experience a guided Viche tasting—the ancestral spirit of
-                  the Pacific—and learn about its cultural significance.</p>
+<div class="tour-gallery-item">
+<img alt="Street Food Experience 3" loading="lazy" src="images/tours/streed-food/FinalSelects20230122_1789.jpg"/>
+<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
 </div>
-<div class="timeline-item" style="position: relative;">
-<span style="position: absolute; left: -43px; top: 0; background: var(--pink-hot); color: var(--white); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">4</span>
-<h4 style="margin: 0 0 10px; font-weight: 700;">Fritanga Feast</h4>
-<p style="margin: 0; color: var(--text-body);">Finish with a selection of Cali's finest fried snacks
-                  (aborrajados, empanadas) and a refreshing local fruit drink.</p>
+<div class="tour-gallery-item">
+<img alt="Street Food Experience 4" loading="lazy" src="images/tours/streed-food/FinalSelects20230122_1792.jpg"/>
+<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
+</div>
 </div>
 </div>
 </section>
-<section class="tour-included mb-40">
-<h2 class="section-title">What's Included</h2>
-<div class="included-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-<div class="included-item" style="display: flex; align-items: center; gap: 10px; font-weight: 600; padding: 12px; border-radius: 4px; border: 1px solid var(--gray-light);">
-<i class="fas fa-check" style="color: var(--pink-hot);"></i> Professional Bilingual Guide</div>
-<div class="included-item" style="display: flex; align-items: center; gap: 10px; font-weight: 600; padding: 12px; border-radius: 4px; border: 1px solid var(--gray-light);">
-<i class="fas fa-check" style="color: var(--pink-hot);"></i> 6+ Curated Food Tastings</div>
-<div class="included-item" style="display: flex; align-items: center; gap: 10px; font-weight: 600; padding: 12px; border-radius: 4px; border: 1px solid var(--gray-light);">
-<i class="fas fa-check" style="color: var(--pink-hot);"></i> Ancestral Viche Tasting</div>
-<div class="included-item" style="display: flex; align-items: center; gap: 10px; font-weight: 600; padding: 12px; border-radius: 4px; border: 1px solid var(--gray-light);">
-<i class="fas fa-check" style="color: var(--pink-hot);"></i> Cultural Entry to La Linterna</div>
-<div class="included-item" style="display: flex; align-items: center; gap: 10px; font-weight: 600; padding: 12px; border-radius: 4px; border: 1px solid var(--gray-light);">
-<i class="fas fa-check" style="color: var(--pink-hot);"></i> Local Dessert to Finish</div>
-<div class="included-item" style="display: flex; align-items: center; gap: 10px; font-weight: 600; padding: 12px; border-radius: 4px; border: 1px solid var(--gray-light);">
-<i class="fas fa-check" style="color: var(--pink-hot);"></i> Small Group Dynamics</div>
+
+<!-- Main Content -->
+<section class="tour-content-wrapper">
+<div class="container">
+<div class="tour-content-grid">
+<!-- Left Content -->
+<div class="tour-main-content">
+<div class="tour-description-text">
+<h2>About this experience</h2>
+<p>This walking tour is a sensory exploration of Cali's street life. We'll wander through historic neighborhoods, meeting the vendors and artisans who have kept our traditions alive for generations. From crispy empanadas to ancestral Viche moonshine, every bite tells a story of community and resilience.</p>
+</div>
+
+<div class="tour-itinerary">
+<h2>The Experience</h2>
+<div class="itinerary-item">
+<div class="itinerary-number">01</div>
+<div class="itinerary-content">
+<h4>Salsa &amp; Street Art</h4>
+<p>Walk the Boulevard del Río and discover the creative resilience of Barrio Obrero's visual culture at La Linterna poster workshop.</p>
+</div>
+</div>
+<div class="itinerary-item">
+<div class="itinerary-number">02</div>
+<div class="itinerary-content">
+<h4>Market Flavors</h4>
+<p>Explore local markets and taste exotic fruits, fresh juices, and traditional snacks that locals enjoy daily.</p>
+</div>
+</div>
+<div class="itinerary-item">
+<div class="itinerary-number">03</div>
+<div class="itinerary-content">
+<h4>Family Recipes</h4>
+<p>Meet generational vendors selling secret-family-recipe treats passed down through decades of Cali culture.</p>
+</div>
+</div>
+<div class="itinerary-item">
+<div class="itinerary-number">04</div>
+<div class="itinerary-content">
+<h4>Viche Tasting</h4>
+<p>End with a taste of Viche, the ancestral sugarcane spirit that represents Colombia's Pacific coast heritage.</p>
+</div>
+</div>
+</div>
+
+<div class="tour-includes">
+<h2>What's Included</h2>
+<div class="includes-grid">
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>Professional Local Guide</span></div>
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>All Food Tastings</span></div>
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>Local Drink Samples</span></div>
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>Walking Route Map</span></div>
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>Cultural Stories &amp; History</span></div>
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>Viche Tasting</span></div>
+</div>
+</div>
+</div>
+
+<!-- Right Sidebar -->
+<aside class="tour-sidebar">
+<div class="booking-card">
+<div class="booking-card-price">
+<div class="booking-card-price-label">Starting from</div>
+<div class="booking-card-price-value">95,000 <span>COP</span></div>
+</div>
+
+<div class="booking-features">
+<div class="booking-feature">
+<i class="far fa-clock"></i>
+<div class="booking-feature-text">
+<div class="booking-feature-label">Duration</div>
+<div class="booking-feature-value">3 Hours</div>
+</div>
+</div>
+<div class="booking-feature">
+<i class="fas fa-walking"></i>
+<div class="booking-feature-text">
+<div class="booking-feature-label">Activity</div>
+<div class="booking-feature-value">Walking Food Tour</div>
+</div>
+</div>
+<div class="booking-feature">
+<i class="fas fa-language"></i>
+<div class="booking-feature-text">
+<div class="booking-feature-label">Languages</div>
+<div class="booking-feature-value">English &amp; Spanish</div>
+</div>
+</div>
+<div class="booking-feature">
+<i class="fas fa-users"></i>
+<div class="booking-feature-text">
+<div class="booking-feature-label">Group Size</div>
+<div class="booking-feature-value">Max 6 people</div>
+</div>
+</div>
+</div>
+
+<a class="btn btn-pink" href="https://wa.me/573162543554" rel="noopener" target="_blank">
+<i class="fab fa-whatsapp"></i> Book via WhatsApp
+</a>
+
+<div class="booking-guarantee">
+<i class="fas fa-shield-alt"></i> Free cancellation up to 24 hours before
+</div>
+</div>
+
+<div class="glass-card" style="margin-top: 20px; padding: 24px;">
+<h4 style="margin-bottom: 12px; font-size: 1rem;">💡 Juan's Tip</h4>
+<p style="font-size: 0.9rem; color: var(--text-body); line-height: 1.6; margin: 0;">Come hungry! We visit 6+ tasting spots. Also wear comfortable walking shoes as we cover about 3km.</p>
+</div>
+</aside>
+</div>
 </div>
 </section>
-<section class="mt-40 mb-40">
-<h2 class="section-title">You Might Also Like</h2>
+
+<!-- You Might Also Like -->
+<section class="py-60" style="background: var(--pink-blush);">
+<div class="container">
+<h2 class="section-title mb-30">You Might Also Like</h2>
 <div class="tours-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
 <div class="tour-card" onclick="window.location.href='market-tour.html'">
 <div class="tour-card-img" style="height: 180px;">
@@ -165,83 +225,22 @@
 <div class="tour-card-body" style="padding: 15px;">
 <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Galería Alameda Market Tour</h4>
 <div class="tour-card-price" style="font-size: 1.1rem;">From 95,000 COP</div>
-<a class="btn btn-pink btn-sm mt-10" href="market-tour.html" style="display: inline-block;">See
-                Details</a>
+<a class="btn btn-pink btn-sm mt-10" href="market-tour.html" style="display: inline-block;">See Details</a>
 </div>
 </div>
-<div class="tour-card" onclick="window.location.href='cristo-rey.html'">
+<div class="tour-card" onclick="window.location.href='salsa-tour.html'">
 <div class="tour-card-img" style="height: 180px;">
-<img alt="Cristo Rey Viewpoint Tour" loading="lazy" src="images/tours/cristo-rey-thumb.jpg"/>
+<img alt="Cali Salsa Tour" loading="lazy" src="images/tours/salsa-tour-thumb.jpg"/>
 </div>
 <div class="tour-card-body" style="padding: 15px;">
-<h4 style="font-size: 1.1rem; margin-bottom: 5px;">Cristo Rey Viewpoint Tour</h4>
-<div class="tour-card-price" style="font-size: 1.1rem;">From 359,000 COP</div>
-<a class="btn btn-pink btn-sm mt-10" href="cristo-rey.html" style="display: inline-block;">See Details</a>
+<h4 style="font-size: 1.1rem; margin-bottom: 5px;">Cali Salsa Tour</h4>
+<div class="tour-card-price" style="font-size: 1.1rem;">From 120,000 COP</div>
+<a class="btn btn-pink btn-sm mt-10" href="salsa-tour.html" style="display: inline-block;">See Details</a>
 </div>
 </div>
 </div>
-</section><section class="mt-40 mb-40">
-<h2 class="section-title">What Travelers Say</h2>
-<div class="reviews-grid">
-<div class="glass-card" style="padding: 20px;">
-<div style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
-<p style="font-size: 0.95rem; font-style: italic; margin-bottom: 10px;">"Juan made Cali come alive for us.
-              The street food tour was the highlight of our trip!"</p>
-<div style="font-size: 0.85rem; font-weight: 700;">— Sarah M., USA</div>
 </div>
-<div class="glass-card" style="padding: 20px;">
-<div style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
-<p style="font-size: 0.95rem; font-style: italic; margin-bottom: 10px;">"Incredibly knowledgeable guide. We
-              learned so much about Colombian culture and history."</p>
-<div style="font-size: 0.85rem; font-weight: 700;">— Thomas B., Germany</div>
-</div>
-<div class="glass-card" style="padding: 20px;">
-<div style="color: #FFD700; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
-<p style="font-size: 0.95rem; font-style: italic; margin-bottom: 10px;">"Best experience in Colombia. Juan
-              is passionate, funny and knows everyone in the city!"</p>
-<div style="font-size: 0.85rem; font-weight: 700;">— Camille D., France</div>
-</div>
-</div>
-</section></div>
-<aside class="tour-sidebar reveal">
-<div class="booking-widget" style="background: var(--white); border-radius: 4px; padding: 30px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); border: 1px solid var(--gray-medium);">
-<div style="margin-bottom: 20px;">
-<span style="font-size: 32px; font-weight: 900; color: var(--dark); font-family: var(--font-heading);">95,000
-                COP</span>
-<span style="font-size: 14px; color: var(--text-muted); margin-left: 5px;">per person</span>
-</div>
-<div style="margin-bottom: 20px;">
-<label style="font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em; color: var(--text-muted); display: block; margin-bottom: 8px;">Date</label>
-<input style="width: 100%; height: 52px; border: 1px solid #D0C8CC; padding: 0 15px; font-family: inherit; font-size: 16px; border-radius: 0;" type="date"/>
-</div>
-<div style="margin-bottom: 24px;">
-<label style="font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em; color: var(--text-muted); display: block; margin-bottom: 8px;">Group
-                Size</label>
-<div style="display: flex; align-items: center; border: 1px solid #D0C8CC; height: 52px;">
-<button style="flex: 1; height: 100%; background: transparent; border: none; font-size: 20px; cursor: pointer; color: var(--dark);">-</button>
-<div style="flex: 1; text-align: center; font-weight: 700; color: var(--dark);">2</div>
-<button style="flex: 1; height: 100%; background: transparent; border: none; font-size: 20px; cursor: pointer; color: var(--dark);">+</button>
-</div>
-</div>
-<div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--dark); margin-bottom: 24px; font-size: 18px; border-top: 1px solid var(--gray-medium); padding-top: 20px;">
-<span>Total</span>
-<span>190,000 COP</span>
-</div>
-<a class="btn btn-pink" href="https://wa.me/573162543554" style="display: block; width: 100%; text-align: center; margin-bottom: 16px; border-radius: 0;">BOOK VIA
-              WHATSAPP</a>
-<a href="#" style="display: block; text-align: center; color: var(--dark); font-size: 13px; font-weight: 600; text-transform: uppercase; text-decoration: underline;">ASK
-              A QUESTION</a>
-</div>
-<div style="background: var(--pink-soft); padding: 24px; border-radius: 4px; margin-top: 24px; border-left: 4px solid var(--pink-hot);">
-<h4 style="color: var(--pink-hot); font-size: 1rem; margin-bottom: 8px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
-<i class="fas fa-lightbulb"></i> Juan's Tip
-            </h4>
-<p style="font-style: italic; color: var(--dark); font-size: 0.95rem; line-height: 1.5; margin: 0;">Come
-              hungry! This tour is a full meal's worth of diverse local flavors and history.</p>
-</div>
-</aside>
-</div>
-</div>
+</section>
 </main>
 <footer class="footer">
 <div class="footer-tagline">"Showing Cali's true soul — one tour at a time"</div>
