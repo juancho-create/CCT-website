@@ -437,7 +437,7 @@ header .navbar.scrolled {
 .tours-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: var(--space-8);
 }
 
@@ -884,8 +884,9 @@ header .navbar.scrolled {
 .footer {
   background: var(--fondo-negro);
   color: var(--text-primary);
-  padding: var(--space-20) 0 var(--space-10);
+  padding: 3rem 0 2rem;
   border-top: 1px solid rgba(233, 30, 140, 0.2);
+  margin-top: 0;
 }
 
 .footer-tagline {

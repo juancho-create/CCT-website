@@ -2045,3 +2045,112 @@
     padding: 1.5rem;
   }
 }
+/* ============================================
+   SAFETY PAGE FIXES
+   ============================================ */
+
+/* Ensure safety page content is centered */
+.content-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Safety page info-grid - single column on mobile, two columns on desktop */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Info card styling for safety page */
+.info-grid .info-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-medium);
+}
+
+.info-grid .info-card h4 {
+  color: var(--text-accent);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.info-grid .info-card p {
+  color: var(--text-body);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Sources list styling */
+.sources-list ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.sources-list li {
+  margin-bottom: 0.5rem;
+  color: var(--text-body);
+}
+
+/* Responsive adjustments for safety page */
+@media (max-width: 768px) {
+  .content-page {
+    padding: 0 1rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   YOU MIGHT ALSO LIKE - Related Tours
+   ============================================ */
+
+/* Container for related tours section */
+.related-tours-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Card image sizing for related tours */
+.related-tours-grid .tour-card-img {
+  height: 180px;
+  overflow: hidden;
+}
+
+.related-tours-grid .tour-card-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Responsive: single column on mobile */
+@media (max-width: 768px) {
+  .related-tours-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   SPACING UTILITY CLASSES
+   ============================================ */
+
+/* Margin utilities */
+.mt-10 { margin-top: 0.625rem; }
+.mt-20 { margin-top: 1.25rem; }
+.mt-30 { margin-top: 1.875rem; }
+.mt-60 { margin-top: 3rem; }
+
+.mb-20 { margin-bottom: 1.25rem; }
+.mb-30 { margin-bottom: 1.875rem; }
+.mb-40 { margin-bottom: 2.5rem; }
+.mb-60 { margin-bottom: 2.5rem; }
+
+/* Padding utilities */
+.py-60 { padding-top: 3rem; padding-bottom: 3rem; }
