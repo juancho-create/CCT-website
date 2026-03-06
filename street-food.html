@@ -74,32 +74,30 @@
 </div>
 <span class="category-badge" style="background: var(--dark); color: var(--white); padding: 6px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 15px; display: inline-block;">Culinary
           Adventure</span>
-<h1 style="color: var(--white); font-family: 'Clash Display', sans-serif; font-weight: 900; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.05; margin-bottom: 15px; max-width: 800px;">
+<h1 style="color: var(--white); font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.05; margin-bottom: 15px; max-width: 800px;">
           Street Food &amp; Stories</h1>
 <p style="color: var(--white); opacity: 0.8; font-size: 1.2rem; max-width: 600px; margin: 0;">Taste the real
           Cali. A walking culinary journey through the neighborhoods and flavors that define our soul.</p>
 </div>
 </div>
-<div class="carousel" style="margin-bottom: 40px; border-radius: 4px; overflow: hidden; height: 450px; position: relative;">
-<div class="carousel-track-container" style="height: 100%; position: relative; overflow: hidden;">
-<ul class="carousel-track" style="padding: 0; margin: 0; list-style: none; position: relative; height: 100%; transition: transform 500ms ease-in-out;">
-<li class="carousel-slide" style="position: absolute; top: 0; bottom: 0; width: 100%;"> <img src="images/tours/streed-food/20230115_172916.jpg" style="width: 100%; height: 100%; object-fit: cover;"/> </li>
-<li class="carousel-slide" style="position: absolute; top: 0; bottom: 0; width: 100%;"> <img src="images/tours/streed-food/20230201_174057.jpg" style="width: 100%; height: 100%; object-fit: cover;"/> </li>
-<li class="carousel-slide" style="position: absolute; top: 0; bottom: 0; width: 100%;"> <img src="images/tours/streed-food/FinalSelects20230122_1789.jpg" style="width: 100%; height: 100%; object-fit: cover;"/> </li>
-<li class="carousel-slide" style="position: absolute; top: 0; bottom: 0; width: 100%;"> <img src="images/tours/streed-food/FinalSelects20230122_1792.jpg" style="width: 100%; height: 100%; object-fit: cover;"/> </li>
+<div class="container mt-40 reveal">
+<div class="carousel">
+<div class="carousel-track-container">
+<ul class="carousel-track">
+<li class="carousel-slide active"><img alt="Street Food Experience 1" decoding="async" loading="eager" src="images/tours/streed-food/20230115_172916.jpg"/></li>
+<li class="carousel-slide"><img alt="Street Food Experience 2" decoding="async" loading="lazy" src="images/tours/streed-food/20230201_174057.jpg"/></li>
+<li class="carousel-slide"><img alt="Street Food Experience 3" decoding="async" loading="lazy" src="images/tours/streed-food/FinalSelects20230122_1789.jpg"/></li>
+<li class="carousel-slide"><img alt="Street Food Experience 4" decoding="async" loading="lazy" src="images/tours/streed-food/FinalSelects20230122_1792.jpg"/></li>
 </ul>
 </div>
-<button class="carousel-button carousel-button--prev" style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10;">
-<i class="fas fa-chevron-left"></i>
-</button>
-<button class="carousel-button carousel-button--next" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10;">
-<i class="fas fa-chevron-right"></i>
-</button>
-<div class="carousel-nav" style="display: flex; justify-content: center; padding: 10px 0; position: absolute; bottom: 10px; width: 100%; z-index: 10;">
-<button class="carousel-indicator" style="border: 0; border-radius: 50%; width: 12px; height: 12px; background: rgba(255,255,255,0.5); margin: 0 5px; cursor: pointer;"></button>
-<button class="carousel-indicator" style="border: 0; border-radius: 50%; width: 12px; height: 12px; background: rgba(255,255,255,0.5); margin: 0 5px; cursor: pointer;"></button>
-<button class="carousel-indicator" style="border: 0; border-radius: 50%; width: 12px; height: 12px; background: rgba(255,255,255,0.5); margin: 0 5px; cursor: pointer;"></button>
-<button class="carousel-indicator" style="border: 0; border-radius: 50%; width: 12px; height: 12px; background: rgba(255,255,255,0.5); margin: 0 5px; cursor: pointer;"></button>
+<button aria-label="Previous image" class="carousel-button carousel-button--prev"><i class="fas fa-chevron-left"></i></button>
+<button aria-label="Next image" class="carousel-button carousel-button--next"><i class="fas fa-chevron-right"></i></button>
+<div class="carousel-nav">
+<button aria-label="Go to slide 1" class="carousel-indicator active"></button>
+<button aria-label="Go to slide 2" class="carousel-indicator"></button>
+<button aria-label="Go to slide 3" class="carousel-indicator"></button>
+<button aria-label="Go to slide 4" class="carousel-indicator"></button>
+</div>
 </div>
 </div>
 <div class="tour-page-container container d-none-if-needed" style="margin-top: 60px;">
@@ -245,7 +243,6 @@
 </div>
 </div>
 </main>
-<footer id="footer-placeholder">
 <footer class="footer">
 <div class="footer-tagline">"Showing Cali's true soul — one tour at a time"</div>
 <div class="footer-contact">
@@ -260,6 +257,7 @@
 <div class="footer-copy">
         ©2024 Cali Cultural Tours · RNT 196165 · Proudly showing Cali's soul.
       </div>
+</footer>
 <div class="overlay" id="overlay"></div>
 <div class="modal" id="thankYouModal">
 <div class="modal-icon">
@@ -269,7 +267,6 @@
 <p>Thanks for reaching out! Juan will get back to you as soon as possible.</p>
 <button class="btn btn-pink" onclick="closeModal()">Close</button>
 </div>
-</footer>
 <a aria-label="Contact Juan on WhatsApp" class="wa-float" href="https://wa.me/573162543554" rel="noopener" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
@@ -278,5 +275,5 @@
 <script src="src/js/carousel.js" type="module"></script>
 <script src="src/js/performance-optimizer.js" type="module"></script>
 <script src="src/js/forms.js" type="module"></script>
-</footer></body>
+</body>
 </html>

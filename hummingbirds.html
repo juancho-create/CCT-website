@@ -79,24 +79,21 @@
 <div class="carousel">
 <div class="carousel-track-container">
 <ul class="carousel-track">
-<li class="carousel-slide"><img alt="Hummingbirds Experience 1" src="images/tours/hummingbirds/IMG_20240311_112719703.jpg"/></li>
-<li class="carousel-slide"><img alt="Hummingbirds Experience 2" src="images/tours/hummingbirds/IMG_20240311_114912080.jpg"/></li>
-<li class="carousel-slide"><img alt="Hummingbirds Experience 3" src="images/tours/hummingbirds/IMG_4116.JPG"/>
-</li>
-<li class="carousel-slide"><img alt="Hummingbirds Experience 4" src="images/tours/hummingbirds/IMG_4125.JPG"/>
-</li>
-<li class="carousel-slide"><img alt="Hummingbirds Experience 5" src="images/tours/hummingbirds/IMG_4782.JPG"/>
-</li>
+<li class="carousel-slide active"><img alt="Hummingbirds Experience 1" decoding="async" loading="eager" src="images/tours/hummingbirds/IMG_20240311_112719703.jpg"/></li>
+<li class="carousel-slide"><img alt="Hummingbirds Experience 2" decoding="async" loading="lazy" src="images/tours/hummingbirds/IMG_20240311_114912080.jpg"/></li>
+<li class="carousel-slide"><img alt="Hummingbirds Experience 3" decoding="async" loading="lazy" src="images/tours/hummingbirds/IMG_4116.JPG"/></li>
+<li class="carousel-slide"><img alt="Hummingbirds Experience 4" decoding="async" loading="lazy" src="images/tours/hummingbirds/IMG_4125.JPG"/></li>
+<li class="carousel-slide"><img alt="Hummingbirds Experience 5" decoding="async" loading="lazy" src="images/tours/hummingbirds/IMG_4782.JPG"/></li>
 </ul>
 </div>
-<button class="carousel-button carousel-button--prev"><i class="fas fa-chevron-left"></i></button>
-<button class="carousel-button carousel-button--next"><i class="fas fa-chevron-right"></i></button>
+<button aria-label="Previous slide" class="carousel-button carousel-button--prev"><i class="fas fa-chevron-left"></i></button>
+<button aria-label="Next slide" class="carousel-button carousel-button--next"><i class="fas fa-chevron-right"></i></button>
 <div class="carousel-nav">
-<button class="carousel-indicator active"></button>
-<button class="carousel-indicator"></button>
-<button class="carousel-indicator"></button>
-<button class="carousel-indicator"></button>
-<button class="carousel-indicator"></button>
+<button aria-label="Go to slide 1" class="carousel-indicator active"></button>
+<button aria-label="Go to slide 2" class="carousel-indicator"></button>
+<button aria-label="Go to slide 3" class="carousel-indicator"></button>
+<button aria-label="Go to slide 4" class="carousel-indicator"></button>
+<button aria-label="Go to slide 5" class="carousel-indicator"></button>
 </div>
 </div>
 </div>
@@ -233,7 +230,6 @@
 </div>
 </div>
 </main>
-<footer id="footer-placeholder">
 <footer class="footer">
 <div class="footer-tagline">"Showing Cali's true soul — one tour at a time"</div>
 <div class="footer-contact">
@@ -248,6 +244,7 @@
 <div class="footer-copy">
     ©2024 Cali Cultural Tours · RNT 196165 · Proudly showing Cali's soul.
   </div>
+</footer>
 <div class="overlay" id="overlay"></div>
 <div class="modal" id="thankYouModal">
 <div class="modal-icon">
@@ -257,7 +254,6 @@
 <p>Thanks for reaching out! Juan will get back to you as soon as possible.</p>
 <button class="btn btn-pink" onclick="closeModal()">Close</button>
 </div>
-</footer>
 <a aria-label="Contact Juan on WhatsApp" class="wa-float" href="https://wa.me/573162543554" rel="noopener" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
@@ -266,5 +262,5 @@
 <script src="src/js/carousel.js" type="module"></script>
 <script src="src/js/performance-optimizer.js" type="module"></script>
 <script src="src/js/forms.js" type="module"></script>
-</footer></body>
+</body>
 </html>
