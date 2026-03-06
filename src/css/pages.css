@@ -755,96 +755,161 @@
   margin: 0 auto;
 }
 
-/* Tour Gallery - Horizontal Strip */
-.tour-gallery {
+/* Tour Detail - Two Column Layout with Carousel */
+.tour-detail-wrapper {
   background: var(--white);
-  padding: 0 0 60px;
-  overflow: hidden;
+  padding: 40px 0 80px;
 }
 
-.tour-gallery .container {
-  max-width: 1400px;
-}
-
-.tour-gallery-grid {
+.tour-detail-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 200px 200px;
-  gap: 16px;
-  border-radius: 20px;
-  overflow: hidden;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+  align-items: start;
 }
 
-.tour-gallery-item {
+/* Left Column - Carousel + Content */
+.tour-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Tour Carousel - Compact in left column */
+.tour-carousel {
   position: relative;
+  width: 100%;
+  border-radius: 16px;
   overflow: hidden;
-  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: var(--black);
 }
 
-.tour-gallery-item:first-child {
-  grid-row: 1 / 3;
+.tour-carousel::before {
+  content: '';
+  display: block;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
 }
 
-.tour-gallery-item img {
+.tour-carousel-track-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.tour-carousel-track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tour-carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.tour-carousel-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
 }
 
-.tour-gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-.tour-gallery-overlay {
+/* Carousel Controls */
+.tour-carousel-btn {
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.3);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--text-primary);
+  font-size: 1rem;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.tour-gallery-item:hover .tour-gallery-overlay {
-  opacity: 1;
+.tour-carousel-btn:hover {
+  background: var(--white);
+  color: var(--pink);
+  transform: translateY(-50%) scale(1.1);
 }
 
-.tour-gallery-overlay i {
-  color: white;
-  font-size: 2rem;
+.tour-carousel-btn--prev {
+  left: 16px;
 }
 
-/* View All Photos Button */
-.view-all-photos {
+.tour-carousel-btn--next {
+  right: 16px;
+}
+
+/* Carousel Indicators */
+.tour-carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: rgba(0,0,0,0.7);
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border: none;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+}
+
+.tour-carousel-indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 0;
 }
 
-.view-all-photos:hover {
+.tour-carousel-indicator.active {
   background: var(--pink);
+  transform: scale(1.2);
 }
 
-/* Tour Content Layout */
-.tour-content-wrapper {
-  background: var(--white);
-  padding: 0 0 80px;
+/* Tour Main Content */
+.tour-main-content h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--pink-blush);
 }
 
-.tour-content-grid {
-  display: grid;
-  grid-template-columns: 1fr 380px;
+.tour-description-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-body);
+  margin-bottom: 24px;
+}
+
+/* Right Column - Sticky Sidebar */
+.tour-sidebar {
+  position: sticky;
+  top: 100px;
+}
   gap: 60px;
   align-items: start;
 }

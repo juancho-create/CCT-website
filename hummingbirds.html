@@ -76,39 +76,49 @@
 </div>
 </section>
 
-<!-- Photo Gallery Grid -->
-<section class="tour-gallery">
+<!-- Two Column Layout with Carousel -->
+<section class="tour-detail-wrapper">
 <div class="container">
-<div class="tour-gallery-grid">
-<div class="tour-gallery-item">
-<img alt="Hummingbirds Experience 1" loading="eager" src="images/tours/hummingbirds/IMG_20240311_112719703.jpg"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
+<div class="tour-detail-grid">
+<!-- Left Column - Carousel + Content -->
+<div class="tour-left-column">
+<!-- Carousel -->
+<div class="tour-carousel">
+<div class="tour-carousel-track-container">
+<ul class="tour-carousel-track">
+<li class="tour-carousel-slide active">
+<img alt="Hummingbirds Experience 1" decoding="async" loading="eager" src="images/tours/hummingbirds/IMG_20240311_112719703.jpg"/>
+</li>
+<li class="tour-carousel-slide">
+<img alt="Hummingbirds Experience 2" decoding="async" loading="lazy" src="images/tours/hummingbirds/IMG_20240311_114912080.jpg"/>
+</li>
+<li class="tour-carousel-slide">
+<img alt="Hummingbirds Experience 3" decoding="async" loading="lazy" src="images/tours/hummingbirds/IMG_4116.JPG"/>
+</li>
+<li class="tour-carousel-slide">
+<img alt="Hummingbirds Experience 4" decoding="async" loading="lazy" src="images/tours/hummingbirds/IMG_4125.JPG"/>
+</li>
+<li class="tour-carousel-slide">
+<img alt="Hummingbirds Experience 5" decoding="async" loading="lazy" src="images/tours/hummingbirds/IMG_4782.JPG"/>
+</li>
+</ul>
 </div>
-<div class="tour-gallery-item">
-<img alt="Hummingbirds Experience 2" loading="lazy" src="images/tours/hummingbirds/IMG_20240311_114912080.jpg"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
-</div>
-<div class="tour-gallery-item">
-<img alt="Hummingbirds Experience 3" loading="lazy" src="images/tours/hummingbirds/IMG_4116.JPG"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
-</div>
-<div class="tour-gallery-item">
-<img alt="Hummingbirds Experience 4" loading="lazy" src="images/tours/hummingbirds/IMG_4125.JPG"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
-<button class="view-all-photos">+1 photo</button>
-</div>
-<div class="tour-gallery-item">
-<img alt="Hummingbirds Experience 5" loading="lazy" src="images/tours/hummingbirds/IMG_4782.JPG"/>
+<button aria-label="Previous image" class="tour-carousel-btn tour-carousel-btn--prev">
+<i class="fas fa-chevron-left"></i>
+</button>
+<button aria-label="Next image" class="tour-carousel-btn tour-carousel-btn--next">
+<i class="fas fa-chevron-right"></i>
+</button>
+<div class="tour-carousel-nav">
+<button aria-label="Go to slide 1" class="tour-carousel-indicator active"></button>
+<button aria-label="Go to slide 2" class="tour-carousel-indicator"></button>
+<button aria-label="Go to slide 3" class="tour-carousel-indicator"></button>
+<button aria-label="Go to slide 4" class="tour-carousel-indicator"></button>
+<button aria-label="Go to slide 5" class="tour-carousel-indicator"></button>
 </div>
 </div>
-</div>
-</section>
 
-<!-- Main Content -->
-<section class="tour-content-wrapper">
-<div class="container">
-<div class="tour-content-grid">
-<!-- Left Content -->
+<!-- Content -->
 <div class="tour-main-content">
 <div class="tour-description-text">
 <h2>About this experience</h2>
@@ -159,8 +169,9 @@
 </div>
 </div>
 </div>
+</div>
 
-<!-- Right Sidebar -->
+<!-- Right Column - Sticky Sidebar -->
 <aside class="tour-sidebar">
 <div class="booking-card">
 <div class="booking-card-price">

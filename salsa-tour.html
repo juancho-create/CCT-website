@@ -67,49 +67,67 @@
 </div>
 </header>
 <main id="main-content">
-<!-- Clean Header -->
-<section class="tour-header">
+<!-- Two Column Layout -->
+<section class="tour-two-col">
 <div class="container">
+<div class="tour-two-col-grid">
+<!-- Left: Image Carousel -->
+<div class="tour-carousel-col">
+<div class="tour-carousel">
+<div class="tour-carousel-main">
+<img alt="Cali Salsa Experience" class="tour-carousel-img active" loading="eager" src="images/tours/salsa-tour/IMG_20240309_183355743.jpg"/>
+<img alt="Cali Salsa Experience" class="tour-carousel-img" loading="lazy" src="images/tours/salsa-tour/IMG_20230802_205625659.jpg"/>
+<img alt="Cali Salsa Experience" class="tour-carousel-img" loading="lazy" src="images/tours/salsa-tour/IMG_20250815_135423093_HDR_AE.jpg"/>
+<img alt="Cali Salsa Experience" class="tour-carousel-img" loading="lazy" src="images/tours/salsa-tour/Screenshot_2025-05-03-21-34-45-549_com.google.android.apps.photos-edit.jpg"/>
+<img alt="Cali Salsa Experience" class="tour-carousel-img" loading="lazy" src="images/tours/salsa-tour/Screenshot_2025-05-03-21-37-10-982_com.google.android.apps.photos.jpg"/>
+<button class="tour-carousel-btn tour-carousel-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+<button class="tour-carousel-btn tour-carousel-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+</div>
+<div class="tour-carousel-dots">
+<button class="tour-carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+<button class="tour-carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+<button class="tour-carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+<button class="tour-carousel-dot" data-slide="3" aria-label="Go to slide 4"></button>
+<button class="tour-carousel-dot" data-slide="4" aria-label="Go to slide 5"></button>
+</div>
+</div>
+</div>
+
+<!-- Right: Tour Info -->
+<div class="tour-info-col">
 <span class="category-badge">Cultural Experience</span>
-<h1>Cali Salsa Experience</h1>
-<p>Discover why Cali is the World Capital of Salsa. A night of rhythm, history, and dancing in the city's most iconic venues.</p>
+<h1 class="tour-title">Cali Salsa Experience</h1>
+<p class="tour-desc">Discover why Cali is the World Capital of Salsa. A night of rhythm, history, and dancing in the city's most iconic venues.</p>
+
+<div class="tour-meta">
+<div class="tour-meta-item">
+<i class="fas fa-tag"></i>
+<span>120,000 COP</span>
+</div>
+<div class="tour-meta-item">
+<i class="far fa-clock"></i>
+<span>4 Hours</span>
+</div>
+<div class="tour-meta-item">
+<i class="fas fa-music"></i>
+<span>Dance &amp; Nightlife Tour</span>
+</div>
+</div>
+
+<a class="btn btn-pink btn-large" href="https://wa.me/573162543554" rel="noopener" target="_blank">
+<i class="fab fa-whatsapp"></i> Book Now
+</a>
+</div>
+</div>
 </div>
 </section>
 
-<!-- Photo Gallery Grid -->
-<section class="tour-gallery">
+<!-- Tour Details -->
+<section class="tour-details">
 <div class="container">
-<div class="tour-gallery-grid">
-<div class="tour-gallery-item">
-<img alt="Salsa Experience 1" loading="eager" src="images/tours/salsa-tour/IMG_20240309_183355743.jpg"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
-</div>
-<div class="tour-gallery-item">
-<img alt="Salsa Experience 2" loading="lazy" src="images/tours/salsa-tour/IMG_20230802_205625659.jpg"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
-</div>
-<div class="tour-gallery-item">
-<img alt="Salsa Experience 3" loading="lazy" src="images/tours/salsa-tour/IMG_20250815_135423093_HDR_AE.jpg"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
-</div>
-<div class="tour-gallery-item">
-<img alt="Salsa Experience 4" loading="lazy" src="images/tours/salsa-tour/Screenshot_2025-05-03-21-34-45-549_com.google.android.apps.photos-edit.jpg"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
-<button class="view-all-photos">+2 photos</button>
-</div>
-<div class="tour-gallery-item">
-<img alt="Salsa Experience 5" loading="lazy" src="images/tours/salsa-tour/Screenshot_2025-05-03-21-37-10-982_com.google.android.apps.photos.jpg"/>
-</div>
-</div>
-</div>
-</section>
-
+<div class="tour-details-grid">
 <!-- Main Content -->
-<section class="tour-content-wrapper">
-<div class="container">
-<div class="tour-content-grid">
-<!-- Left Content -->
-<div class="tour-main-content">
+<div class="tour-details-main">
 <div class="tour-description-text">
 <h2>About this experience</h2>
 <p>This isn't just a tour; it's an immersion into the heartbeat of Cali. We'll trace the roots of salsa from the legendary Grupo Niche to the local record shops where vinyl is still king. Step into the World Capital of Salsa and experience a journey through rhythm, history, and the soul of the city. Finally, you'll put your knowledge to the test with a session at one of the city's most iconic dance spots.</p>
@@ -127,7 +145,7 @@
 <div class="itinerary-item">
 <div class="itinerary-number">02</div>
 <div class="itinerary-content">
-<h4>Salsa Museum Immersion</h4>
+<h4>Salsa Museum</h4>
 <p>A guided visit to either the Jairo Varela Museum or the Barrio Obrero Salsa Museum, meeting the local legends who keep the history alive.</p>
 </div>
 </div>
@@ -141,7 +159,7 @@
 <div class="itinerary-item">
 <div class="itinerary-number">04</div>
 <div class="itinerary-content">
-<h4>Dance Floor Experience</h4>
+<h4>Dance Floor</h4>
 <p>A group salsa class at Topa Tolondra (or similar iconic venue), perfect for all levels to learn the unique Caleño style.</p>
 </div>
 </div>
@@ -150,67 +168,21 @@
 <div class="tour-includes">
 <h2>What's Included</h2>
 <div class="includes-grid">
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>Private Round-trip Transport</span></div>
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>Expert Bilingual Guide</span></div>
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>All Museum Entrance Fees</span></div>
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>Local Snack &amp; Drink Tasting</span></div>
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>Salsa Dance Class</span></div>
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>Authentic Souvenir</span></div>
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>Transport</span></div>
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>Guide</span></div>
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>Museum Entry</span></div>
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>Snacks</span></div>
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>Dance Class</span></div>
+<div class="include-item"><i class="fas fa-check-circle"></i> <span>Souvenir</span></div>
 </div>
 </div>
 </div>
 
-<!-- Right Sidebar -->
-<aside class="tour-sidebar">
-<div class="booking-card">
-<div class="booking-card-price">
-<div class="booking-card-price-label">Starting from</div>
-<div class="booking-card-price-value">120,000 <span>COP</span></div>
-</div>
-
-<div class="booking-features">
-<div class="booking-feature">
-<i class="far fa-clock"></i>
-<div class="booking-feature-text">
-<div class="booking-feature-label">Duration</div>
-<div class="booking-feature-value">4 Hours</div>
-</div>
-</div>
-<div class="booking-feature">
-<i class="fas fa-music"></i>
-<div class="booking-feature-text">
-<div class="booking-feature-label">Activity</div>
-<div class="booking-feature-value">Dance &amp; Nightlife Tour</div>
-</div>
-</div>
-<div class="booking-feature">
-<i class="fas fa-language"></i>
-<div class="booking-feature-text">
-<div class="booking-feature-label">Languages</div>
-<div class="booking-feature-value">English &amp; Spanish</div>
-</div>
-</div>
-<div class="booking-feature">
-<i class="fas fa-users"></i>
-<div class="booking-feature-text">
-<div class="booking-feature-label">Group Size</div>
-<div class="booking-feature-value">Max 8 people</div>
-</div>
-</div>
-</div>
-
-<a class="btn btn-pink" href="https://wa.me/573162543554" rel="noopener" target="_blank">
-<i class="fab fa-whatsapp"></i> Book via WhatsApp
-</a>
-
-<div class="booking-guarantee">
-<i class="fas fa-shield-alt"></i> Free cancellation up to 24 hours before
-</div>
-</div>
-
-<div class="glass-card" style="margin-top: 20px; padding: 24px;">
-<h4 style="margin-bottom: 12px; font-size: 1rem;">💡 Juan's Tip</h4>
-<p style="font-size: 0.9rem; color: var(--text-body); line-height: 1.6; margin: 0;">Wear comfortable shoes! Even if you don't plan to dance much, Cali's salsa energy is contagious and you'll want to join in.</p>
+<!-- Sidebar -->
+<aside class="tour-details-sidebar">
+<div class="glass-card">
+<h4>💡 Juan's Tip</h4>
+<p>Wear comfortable shoes! Even if you don't plan to dance much, Cali's salsa energy is contagious and you'll want to join in.</p>
 </div>
 </aside>
 </div>

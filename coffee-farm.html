@@ -67,152 +67,140 @@
 </div>
 </header>
 <main id="main-content">
-<!-- Clean Header -->
-<section class="tour-header">
+<!-- Two Column Layout: Carousel + Info -->
+<section class="tour-two-column" style="padding: 40px 0 60px;">
 <div class="container">
-<span class="category-badge">Coffee Experience</span>
-<h1>CAFETAL Coffee Farm Visit</h1>
-<p>A day trip to a working coffee farm in the mountains. Walk the fields, pick beans, and understand what makes Colombian coffee the world's best.</p>
-</div>
-</section>
-
-<!-- Photo Gallery Grid -->
-<section class="tour-gallery">
-<div class="container">
-<div class="tour-gallery-grid">
-<div class="tour-gallery-item">
+<div class="two-column-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+<!-- Left Column: Carousel -->
+<div class="tour-carousel-column">
+<div class="carousel" data-carousel>
+<div class="carousel-viewport">
+<div class="carousel-track">
+<div class="carousel-slide active">
 <img alt="Coffee Farm Experience 1" loading="eager" src="images/tours/coffee-farm/IMG_20241125_111355678.jpg"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
 </div>
-<div class="tour-gallery-item">
+<div class="carousel-slide">
 <img alt="Coffee Farm Experience 2" loading="lazy" src="images/tours/coffee-farm/IMG_20241125_121016683.jpg"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
 </div>
-<div class="tour-gallery-item">
+<div class="carousel-slide">
 <img alt="Coffee Farm Experience 3" loading="lazy" src="images/tours/coffee-farm/IMG_20241125_121235976.jpg"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
 </div>
-<div class="tour-gallery-item">
+<div class="carousel-slide">
 <img alt="Coffee Farm Experience 4" loading="lazy" src="images/tours/coffee-farm/IMG_20241125_123333766.jpg"/>
-<div class="tour-gallery-overlay"><i class="fas fa-expand"></i></div>
-<button class="view-all-photos">+1 photo</button>
 </div>
-<div class="tour-gallery-item">
+<div class="carousel-slide">
 <img alt="Coffee Farm Experience 5" loading="lazy" src="images/tours/coffee-farm/IMG_20241125_125816286.jpg"/>
 </div>
 </div>
 </div>
-</section>
-
-<!-- Main Content -->
-<section class="tour-content-wrapper">
-<div class="container">
-<div class="tour-content-grid">
-<!-- Left Content -->
-<div class="tour-main-content">
-<div class="tour-description-text">
-<h2>About this experience</h2>
-<p>A day trip to a working coffee farm in the mountains. Walk the fields, pick beans, and understand what makes Colombian coffee the world's best. From the moment you step onto the plantation, you'll be immersed in the traditions that have made Colombian coffee famous worldwide. Learn from local farmers who have spent generations perfecting their craft.</p>
+<button aria-label="Previous" class="carousel-btn carousel-prev"><i class="fas fa-chevron-left"></i></button>
+<button aria-label="Next" class="carousel-btn carousel-next"><i class="fas fa-chevron-right"></i></button>
+<div class="carousel-dots">
+<button aria-label="Go to slide 1" class="carousel-dot active"></button>
+<button aria-label="Go to slide 2" class="carousel-dot"></button>
+<button aria-label="Go to slide 3" class="carousel-dot"></button>
+<button aria-label="Go to slide 4" class="carousel-dot"></button>
+<button aria-label="Go to slide 5" class="carousel-dot"></button>
+</div>
+</div>
 </div>
 
-<div class="tour-itinerary">
-<h2>The Journey</h2>
-<div class="itinerary-item">
-<div class="itinerary-number">01</div>
-<div class="itinerary-content">
+<!-- Right Column: Tour Info -->
+<div class="tour-info-column">
+<span class="category-badge">Coffee Experience</span>
+<h1 style="font-size: 2.5rem; margin: 12px 0 16px; line-height: 1.2;">CAFETAL Coffee Farm Visit</h1>
+<p style="font-size: 1.1rem; color: var(--text-body); line-height: 1.7; margin-bottom: 24px;">A day trip to a working coffee farm in the mountains. Walk the fields, pick beans, and understand what makes Colombian coffee the world's best.</p>
+
+<div class="tour-quick-info" style="display: flex; gap: 24px; margin-bottom: 24px; flex-wrap: wrap;">
+<div class="quick-info-item">
+<i class="fas fa-tag" style="color: var(--primary-pink);"></i>
+<span style="font-weight: 600; color: var(--primary-pink); font-size: 1.1rem;">850,000 COP</span>
+</div>
+<div class="quick-info-item">
+<i class="far fa-clock" style="color: var(--text-body);"></i>
+<span>8 Hours</span>
+</div>
+<div class="quick-info-item">
+<i class="fas fa-seedling" style="color: var(--text-body);"></i>
+<span>Farm Visit &amp; Tasting</span>
+</div>
+</div>
+
+<a class="btn btn-pink btn-lg" href="https://wa.me/573162543554" rel="noopener" target="_blank" style="width: 100%; margin-bottom: 12px;">
+<i class="fab fa-whatsapp"></i> Book via WhatsApp
+</a>
+<p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin: 0;"><i class="fas fa-shield-alt"></i> Free cancellation up to 24 hours before</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Itinerary Section -->
+<section class="tour-itinerary-section" style="padding: 60px 0; background: var(--pink-blush);">
+<div class="container">
+<h2 class="section-title mb-40">The Experience</h2>
+<div class="itinerary-timeline">
+<div class="itinerary-step">
+<div class="itinerary-step-number">01</div>
+<div class="itinerary-step-content">
 <h4>The Journey Up</h4>
 <p>Travel into the mountains to reach the coffee farm, enjoying scenic views of the Andean landscape along the way.</p>
 </div>
 </div>
-<div class="itinerary-item">
-<div class="itinerary-number">02</div>
-<div class="itinerary-content">
+<div class="itinerary-step">
+<div class="itinerary-step-number">02</div>
+<div class="itinerary-step-content">
 <h4>The Harvest</h4>
 <p>Walk through the coffee fields and learn to identify ripe cherries. Try your hand at picking beans just like the local farmers do.</p>
 </div>
 </div>
-<div class="itinerary-item">
-<div class="itinerary-number">03</div>
-<div class="itinerary-content">
+<div class="itinerary-step">
+<div class="itinerary-step-number">03</div>
+<div class="itinerary-step-content">
 <h4>Processing &amp; Roasting</h4>
 <p>Follow the beans through washing, drying, and roasting. Understand how each step affects the final flavor of your cup.</p>
 </div>
 </div>
-<div class="itinerary-item">
-<div class="itinerary-number">04</div>
-<div class="itinerary-content">
+<div class="itinerary-step">
+<div class="itinerary-step-number">04</div>
+<div class="itinerary-step-content">
 <h4>The Perfect Cup</h4>
 <p>End your visit with a professional coffee tasting session, learning to identify the subtle notes that make Colombian coffee special.</p>
 </div>
 </div>
 </div>
+</div>
+</section>
 
-<div class="tour-includes">
-<h2>What's Included</h2>
-<div class="includes-grid">
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>Private Round-trip Transport</span></div>
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>Expert Bilingual Guide</span></div>
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>Farm Entrance &amp; Tour</span></div>
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>Hands-on Harvesting Experience</span></div>
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>Professional Coffee Tasting</span></div>
-<div class="include-item"><i class="fas fa-check-circle"></i> <span>Traditional Farm Lunch</span></div>
+<!-- What's Included Section -->
+<section class="tour-included-section" style="padding: 60px 0;">
+<div class="container">
+<h2 class="section-title mb-40">What's Included</h2>
+<div class="includes-grid-modern" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+<div class="include-card" style="display: flex; align-items: center; gap: 12px; padding: 16px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+<i class="fas fa-check-circle" style="color: var(--primary-pink); font-size: 1.2rem;"></i>
+<span>Private Transport</span>
 </div>
+<div class="include-card" style="display: flex; align-items: center; gap: 12px; padding: 16px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+<i class="fas fa-check-circle" style="color: var(--primary-pink); font-size: 1.2rem;"></i>
+<span>Bilingual Guide</span>
 </div>
+<div class="include-card" style="display: flex; align-items: center; gap: 12px; padding: 16px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+<i class="fas fa-check-circle" style="color: var(--primary-pink); font-size: 1.2rem;"></i>
+<span>Farm Tour</span>
 </div>
-
-<!-- Right Sidebar -->
-<aside class="tour-sidebar">
-<div class="booking-card">
-<div class="booking-card-price">
-<div class="booking-card-price-label">Starting from</div>
-<div class="booking-card-price-value">850,000 <span>COP</span></div>
+<div class="include-card" style="display: flex; align-items: center; gap: 12px; padding: 16px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+<i class="fas fa-check-circle" style="color: var(--primary-pink); font-size: 1.2rem;"></i>
+<span>Harvesting Experience</span>
 </div>
-
-<div class="booking-features">
-<div class="booking-feature">
-<i class="far fa-clock"></i>
-<div class="booking-feature-text">
-<div class="booking-feature-label">Duration</div>
-<div class="booking-feature-value">8 Hours</div>
+<div class="include-card" style="display: flex; align-items: center; gap: 12px; padding: 16px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+<i class="fas fa-check-circle" style="color: var(--primary-pink); font-size: 1.2rem;"></i>
+<span>Coffee Tasting</span>
 </div>
+<div class="include-card" style="display: flex; align-items: center; gap: 12px; padding: 16px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+<i class="fas fa-check-circle" style="color: var(--primary-pink); font-size: 1.2rem;"></i>
+<span>Traditional Lunch</span>
 </div>
-<div class="booking-feature">
-<i class="fas fa-seedling"></i>
-<div class="booking-feature-text">
-<div class="booking-feature-label">Activity</div>
-<div class="booking-feature-value">Farm Visit &amp; Tasting</div>
-</div>
-</div>
-<div class="booking-feature">
-<i class="fas fa-language"></i>
-<div class="booking-feature-text">
-<div class="booking-feature-label">Languages</div>
-<div class="booking-feature-value">English &amp; Spanish</div>
-</div>
-</div>
-<div class="booking-feature">
-<i class="fas fa-users"></i>
-<div class="booking-feature-text">
-<div class="booking-feature-label">Group Size</div>
-<div class="booking-feature-value">Max 8 people</div>
-</div>
-</div>
-</div>
-
-<a class="btn btn-pink" href="https://wa.me/573162543554" rel="noopener" target="_blank">
-<i class="fab fa-whatsapp"></i> Book via WhatsApp
-</a>
-
-<div class="booking-guarantee">
-<i class="fas fa-shield-alt"></i> Free cancellation up to 24 hours before
-</div>
-</div>
-
-<div class="glass-card" style="margin-top: 20px; padding: 24px;">
-<h4 style="margin-bottom: 12px; font-size: 1rem;">💡 Juan's Tip</h4>
-<p style="font-size: 0.9rem; color: var(--text-body); line-height: 1.6; margin: 0;">Wear comfortable shoes with good grip! The farm trails can be muddy, and we'll be walking on uneven terrain throughout the day.</p>
-</div>
-</aside>
 </div>
 </div>
 </section>
