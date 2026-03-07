@@ -405,8 +405,8 @@
 }
 
 .quick-nav-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   background: var(--gray-light);
 }
 

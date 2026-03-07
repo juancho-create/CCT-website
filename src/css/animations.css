@@ -96,18 +96,24 @@
 
 /* Staggered animations for grid items */
 .tour-card,
-.quick-nav-card,
 .blog-card {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tour-card.animate-in,
-.quick-nav-card.animate-in,
 .blog-card.animate-in {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Quick nav cards - visible immediately, subtle hover only */
+.quick-nav-card {
+    opacity: 1;
+    transform: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    will-change: transform;
 }
 
 /* Button micro-interactions */
@@ -179,24 +185,18 @@
     transform: scale(1.1);
 }
 
-/* Quick nav card animations */
-.quick-nav-card {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+/* Quick nav card animations - simplified for performance */
 .quick-nav-card:hover {
-    transform: translateY(-8px) rotate(-1deg);
-    box-shadow: 0 15px 35px rgba(233, 30, 140, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .quick-nav-card .card-icon {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.2s ease;
 }
 
 .quick-nav-card:hover .card-icon {
-    transform: scale(1.1) rotate(5deg);
-    background: var(--pink);
-    color: var(--text-on-dark);
+    transform: scale(1.05);
 }
 
 /* Contact info card animations */
