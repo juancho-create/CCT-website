@@ -5,22 +5,24 @@
 
 class PerformanceOptimizer {
     constructor() {
+        // Only preload small critical images - avoid large hero images
         this.criticalImages = [
-            'images/home-hero.jpg',
-            'images/logo.jpg',
-            'images/tours/salsa-tour-hero.jpg',
-            'images/tours/market-tour-hero.jpg',
-            'images/tours/coffee-farm-hero.jpg',
-            'images/tours/chocotour-hero.jpg'
+            'images/logo.jpg'
         ];
 
         this.init();
     }
 
     init() {
-        // Critical optimizations only
+        // Critical optimizations only - defer heavy operations
         this.preloadCriticalResources();
-        this.optimizeImages();
+        
+        // Defer image optimization to allow critical content to render first
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => this.optimizeImages(), { timeout: 1000 });
+        } else {
+            setTimeout(() => this.optimizeImages(), 100);
+        }
         
         // Defer non-critical optimizations
         setTimeout(() => {
